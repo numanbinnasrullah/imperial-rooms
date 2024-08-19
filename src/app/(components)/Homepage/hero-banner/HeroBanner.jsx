@@ -13,6 +13,7 @@ const HeroBanner = () => {
                         className=" hidden sm:block "
                         width={2000}
                         height={100}
+                        layout="intrinsic"
                         priority
                     />
                 </Link>
@@ -23,6 +24,7 @@ const HeroBanner = () => {
                         objectFit="cover"
                         objectPosition="center"
                         className=" block sm:hidden"
+                        layout="intrinsic"
                         width={1000}
                         height={100}
                         loading="lazy"
