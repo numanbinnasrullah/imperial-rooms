@@ -4,7 +4,7 @@ import Link from "next/link"
 const HeroBanner = () => {
     return (
         <>
-            <div className="relative w-full h-[820px] ">
+            <div className="relative w-full max-h-[820px] ">
                 <Link href={"/about"}>
                     <Image
                         src="/Desktop.png" // Replace with your image path
