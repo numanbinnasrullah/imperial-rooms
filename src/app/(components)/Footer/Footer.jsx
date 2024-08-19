@@ -44,7 +44,7 @@ const Footer = () => {
                     </div>
                    
                 </div>
-                <div className="lg:w-[20%] md:w-[50%] w-full">
+             <div className="lg:w-[20%] md:w-[50%] w-full">
                 <h2 className="text-lg font-semibold mb-6">Join Us On Social Media</h2>
                     <div className="flex w-full space-x-7 my-5">
                         <FaFacebookF className="text-lg" />
@@ -79,6 +79,7 @@ const Footer = () => {
                        
                     </div>
                
+            </div>
             </div>
         <Footerbar />
         </>
