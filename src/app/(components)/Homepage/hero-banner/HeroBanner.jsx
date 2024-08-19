@@ -1,46 +1,45 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 import Head from "next/head";
 
 const HeroBanner = () => {
-  return (
-    <>
-      {/* Preload the critical image */}
-      <Head>
+    return (
+        <>
+        <Head>
         <link rel="preload" href="/Desktop.png" as="image" />
       </Head>
+            <div className="relative w-full h-[70vh] md:h-[90vh]">
+                <Link href={"/about"}>
+                <div className="relative hidden sm:block w-full h-full">
+                    <Image
+                        src="/Desktop.png" // Replace with your image path
+                        alt="Homepage Banner"
+                        objectFit="contain"
+                        className=" hidden sm:block "
+                       
+                        layout="intrinsic"
+                        priority
+                        quality={85}
+                    />
+                    </div>
+                </Link>
+                <Link href={"/about"}>
+                    <Image
+                        src="/mobile.png" // Replace with your image path
+                        alt="Homepage Banner"
+                        objectFit="cover"
+                        objectPosition="center"
+                        className=" block sm:hidden"
+                        layout="intrinsic"
+                        width={1000}
+                        height={100}
+                        loading="lazy"
+                    />
+                </Link>
+                {/* <div className="absolute bottom-0 md:left-[47%] lg:left-[48%]">Arrrow</div> */}
+            </div>
+        </>
+    )
+}
 
-      <div className="relative w-full h-[70vh] md:h-[90vh]">
-        {/* Desktop Image */}
-        <Link href="/about">
-          <div className="relative hidden sm:block w-full h-full">
-            <Image
-              src="/Desktop.png"
-              alt="Homepage Banner"
-              layout="fill" // Take up the entire space without CLS
-              objectFit="cover" // Ensures the image fits within the container
-              priority={true} // Preload for improved LCP
-              quality={85} // Compress the image slightly to reduce load time
-            />
-          </div>
-        </Link>
-
-        {/* Mobile Image */}
-        <Link href="/about">
-          <div className="relative block sm:hidden w-full h-full">
-            <Image
-              src="/mobile.png"
-              alt="Homepage Banner"
-              layout="fill"
-              objectFit="cover"
-              loading="lazy" // Lazy-load for non-critical images
-              quality={85}
-            />
-          </div>
-        </Link>
-      </div>
-    </>
-  );
-};
-
-export default HeroBanner;
+export default HeroBanner
