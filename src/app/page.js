@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       
-      {/* {isVideoShow ? <HeroVideo /> : <HeroBanner />} */}
+      {isVideoShow ? <HeroVideo /> : <HeroBanner />}
       <ShopByCategory />
       <NewArrival />
       <Reviews />

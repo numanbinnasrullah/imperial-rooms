@@ -14,8 +14,10 @@ const HeroBanner = () => {
                         className=" hidden sm:block "
                         quality={85}
                         layout="intrinsic"
-                        priority
+                        
                         loading="lazy"
+                        width={2000}
+                        height={800}
                     />
                 </Link>
                 <Link href={"/about"}>
@@ -28,9 +30,11 @@ const HeroBanner = () => {
                         layout="intrinsic"
                         quality={85}
                         loading="lazy"
+                        width={2000}
+                        height={800}
                     />
                 </Link>
-                {/* <div className="absolute bottom-0 md:left-[47%] lg:left-[48%]">Arrrow</div> */}
+                
             </div>
         </>
     )
