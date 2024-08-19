@@ -33,7 +33,15 @@ const Footer = () => {
                 </div>
                 <div className="lg:w-[20%] md:w-[50%] w-full">
                     <h2 className="text-lg font-semibold mb-6">Customer Service</h2>
-                   
+                    <div className="flex flex-col text-sm leading-7">
+                        <Link href='/about'>Terms And Conditions</Link>
+                        <Link href='/about'>Track Your Order</Link>
+                        <Link href='/about'>Return Policy</Link>
+                        <Link href='/about'>Refund Policy</Link>
+                        <Link href='/about'>Contact Us</Link>
+                      
+                        <Link href='/about'>Customer Reviews</Link>
+                    </div>
                    
                 </div>
              
