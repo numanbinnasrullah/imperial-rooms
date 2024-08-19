@@ -13,6 +13,7 @@ const HeroBanner = () => {
                         className=" hidden sm:block "
                         width={2000}
                         height={100}
+                        priority
                     />
                 </Link>
                 <Link href={"/about"}>
@@ -24,6 +25,7 @@ const HeroBanner = () => {
                         className=" block sm:hidden"
                         width={1000}
                         height={100}
+                        loading="lazy"
                     />
                 </Link>
                 {/* <div className="absolute bottom-0 md:left-[47%] lg:left-[48%]">Arrrow</div> */}
