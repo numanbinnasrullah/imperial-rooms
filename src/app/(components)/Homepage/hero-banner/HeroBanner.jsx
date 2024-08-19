@@ -10,7 +10,7 @@ const HeroBanner = () => {
                         src="/Desktop.png" // Replace with your image path
                         alt="Homepage Banner"
                         objectFit="contain"
-                        className=" hidden sm:block h-[820px]"
+                        className=" hidden sm:block max-h-[820px]"
                         width={2000}
                         height={100}
                     />
