@@ -4,13 +4,13 @@ import Link from "next/link"
 const HeroBanner = () => {
     return (
         <>
-            <div className="relative w-full h-[820px]">
+            <div className="relative w-full ">
                 <Link href={"/about"}>
                     <Image
                         src="/Desktop.png" // Replace with your image path
                         alt="Homepage Banner"
                         objectFit="contain"
-                        className=" hidden sm:block"
+                        className=" hidden sm:block h-[820px]"
                         width={2000}
                         height={100}
                     />
