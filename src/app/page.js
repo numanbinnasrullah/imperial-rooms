@@ -1,6 +1,7 @@
 
 import Blogs from "./(components)/Homepage/blogs/Blogs";
 import GridSlider from "./(components)/Homepage/grid-slider/GridSlider";
+import Hero from "./(components)/Homepage/hero-banner/Hero";
 import HeroBanner from "./(components)/Homepage/hero-banner/HeroBanner";
 import HeroVideo from "./(components)/Homepage/hero-video/HeroVideo";
 import NewArrival from "./(components)/Homepage/new-arrival/NewArrival";
@@ -16,7 +17,7 @@ export default function Home() {
   return (
     <>
       
-      {isVideoShow ? <HeroVideo /> : <HeroBanner />}
+      {isVideoShow ? <HeroVideo /> : <Hero />}
       <ShopByCategory />
       <NewArrival />
       <Reviews />

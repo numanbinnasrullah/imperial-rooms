@@ -59,8 +59,8 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                         <FaStar className="text-yellow-500" />
                         <FaStar className="text-yellow-500" />
                     </div>
-                        <a href="#" className="text-xl hover:text-gray-400 hidden md:block"><FiSearch /></a>
-                        <a href="#" className="text-xl hover:text-gray-400"><FiUser /></a>
+                        <a href="#" className="text-2xl hover:text-gray-400 hidden md:block"><FiSearch /></a>
+                        <a href="#" className="text-2xl hover:text-gray-400"><FiUser /></a>
                         <a href="#" className="text-xl hover:text-gray-400"><FiHeart /></a>
                         <a href="#" className="text-xl hover:text-gray-400"><FiShoppingCart /></a>
                     </div>

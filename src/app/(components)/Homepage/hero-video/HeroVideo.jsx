@@ -1,10 +1,10 @@
 import Link from "next/link"
-
+import '../hero-banner/HeroBanner.css'
 
 const HeroVideo = () => {
     return (
         <>
-            <div className="relative w-full ">
+            <div className="desc_video ">
                 <Link href={"/about"}>
                     <video
                         autoPlay
@@ -16,7 +16,8 @@ const HeroVideo = () => {
                         Your browser does not support the video tag.
                     </video>
                 </Link>
-
+                </div>
+                <div className="mobile_video">
                 <Link href={"/about"}>
                     <video
                         autoPlay

@@ -20,7 +20,7 @@ const Grid = () => {
                                         {/* Button at the bottom */}
                                     </div>
                                     <div className="text-right w-full">
-                                        <button className="bg-[#4A4759] text-white py-3 w-[80%]">Click Me</button>
+                                        <button className="bg-[#4A4759] text-white py-3 w-[80%] rounded-bl-md rounded-br-md">Click Me</button>
                                     </div>
                                 </div>
                       
@@ -31,7 +31,7 @@ const Grid = () => {
                                         {/* Button at the bottom */}
                                     </div>
                                     <div className="text-right w-full ">
-                                        <button className="bg-[#4A4759] text-white py-3 w-[80%]">Click Me</button>
+                                        <button className="bg-[#4A4759] text-white py-3 w-[80%] rounded-bl-md rounded-br-md">Click Me</button>
                                     </div>
                                 </div>
                            
@@ -47,7 +47,7 @@ const Grid = () => {
                                         {/* Button at the bottom */}
                                     </div>
                                     <div className="text-right w-full">
-                                        <button className="bg-[#4A4759] text-white py-3 w-[80%]">Click Me</button>
+                                        <button className="bg-[#4A4759] text-white py-3 w-[80%] rounded-bl-md rounded-br-md">Click Me</button>
                                     </div>
                                 </div>
                       
@@ -58,7 +58,7 @@ const Grid = () => {
                                         {/* Button at the bottom */}
                                     </div>
                                     <div className="text-right w-full ">
-                                        <button className="bg-[#4A4759] text-white py-3 w-[80%]">Click Me</button>
+                                        <button className="bg-[#4A4759] text-white py-3 w-[80%] rounded-bl-md rounded-br-md">Click Me</button>
                                     </div>
                                 </div>
                            
