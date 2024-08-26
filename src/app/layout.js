@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </head> */}
-      <body style={{backgroundColor:"#ccc"}}>
+      <body style={{backgroundColor:"#fff"}}>
         <ReduxProvider>
           <Header />
           {children}
