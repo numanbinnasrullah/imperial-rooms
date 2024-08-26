@@ -15,7 +15,7 @@ const Grid1 = ({collections}) => {
                     
                     {
                         firstTwoCollections.map((item, index)=>(
-                            <div className="w-full flex flex-wrap justify-end gap-10 mb-12">
+                            <div key={index} className="w-full flex flex-wrap justify-end gap-10 mb-12">
                         <div className="w-[60%]  md:w-[100%]  lg:w-[90%] xl:w-[100%] 2xl:w-[90%] justify-center flex space-x-6 ">
                                 <div className="flex flex-col items-center ">
                                     {/* Box */}
@@ -65,7 +65,7 @@ const Grid1 = ({collections}) => {
                     </div> */}
                     {
                         lastTwoCollections.map((item, index)=>(
-                            <div className="w-full flex flex-wrap justify-end gap-8 mb-12">
+                            <div key={index} className="w-full flex flex-wrap justify-end gap-8 mb-12">
                             <div className="w-[60%]  md:w-[100%]  lg:w-[90%] xl:w-[100%] 2xl:w-[90%]   flex justify-end space-x-6 ">
                                         <div className="flex flex-col items-center ">
                                            
