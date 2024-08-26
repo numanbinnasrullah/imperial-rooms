@@ -33,7 +33,7 @@ export default async function Home() {
       {/* <TopSellingProducts collection={top_selling_products}/> */}
       {/* <TopSellingProducts1 collection={top_selling_products}/> */}
       <UserSignup />
-      <Blogs articles={articles} />
+      {/* <Blogs articles={articles} /> */}
       
     </>
 
