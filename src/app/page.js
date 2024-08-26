@@ -16,7 +16,7 @@ import HeroVideo from "./(components)/Homepage/hero-video/HeroVideo";
 
 
 export default async function Home() {
-  
+  const isVideoShow = false;
   return (
     
     <>
