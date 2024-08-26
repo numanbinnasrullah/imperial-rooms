@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
       </head> */}
       <body >
         <ReduxProvider>
-          <Header />
+          {/* <Header /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </ReduxProvider>
       </body>
     </html>
