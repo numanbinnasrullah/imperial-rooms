@@ -1,5 +1,5 @@
 
-import homePageQuery from "@/graphql/homePage/homepage";
+// import homePageQuery from "@/graphql/homePage/homepage";
 // import Blogs from "./(components)/Homepage/blogs/Blogs";
 // import GridSlider from "./(components)/Homepage/grid-slider/GridSlider";
 // import Hero from "./(components)/Homepage/hero-banner/Hero";
@@ -16,14 +16,11 @@ import homePageQuery from "@/graphql/homePage/homepage";
 
 
 export default async function Home() {
-  const homePageData = await homePageQuery()
-  const {collection1, collection2, collection3, collection4, Home_Collection_New_Arrivals_1, Home_Collection_New_Arrivals_2, Home_Collection_New_Arrivals_3, top_selling_products, articles} = homePageData?.data
- console.log("cooo", articles)
-  const isVideoShow = false;
+  
   return (
     
     <>
-      
+      <h1>yes</h1>
       {/* {isVideoShow ? <HeroVideo /> : <Hero />}
       <ShopByCategory collections={[collection1, collection2, collection3, collection4]} />
       <NewArrival newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} /> */}
