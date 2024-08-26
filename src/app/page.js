@@ -17,7 +17,7 @@ import UserSignup from "./(components)/Homepage/user-signup/UserSignup";
 
 export default async function Home() {
   const homePageData = await homePageQuery()
-  const {collection1, collection2, collection3, collection4} = homePageData?.data
+  const {collection1, collection2, collection3, collection4,Home_Collection_New_Arrivals_1, Home_Collection_New_Arrivals_2, Home_Collection_New_Arrivals_3, top_selling_products, articles} = homePageData?.data
  
   const isVideoShow = false;
   return (
