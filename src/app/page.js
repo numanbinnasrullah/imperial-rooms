@@ -12,7 +12,7 @@ import Testimonial from "./(components)/Homepage/testimonial/Testimonial";
 import { TopSellingProducts } from "./(components)/Homepage/top-selling-products/TopSellingProducts";
 import UserSignup from "./(components)/Homepage/user-signup/UserSignup";
 // import NewArrival1 from "./(components)/Homepage/new-arrival/NewArrival copy";
-// import { TopSellingProducts1 } from "./(components)/Homepage/top-selling-products/TopSellingProducts copy";
+import { TopSellingProducts1 } from "./(components)/Homepage/top-selling-products/TopSellingProducts copy";
 
 
 export default async function Home() {
@@ -30,8 +30,8 @@ export default async function Home() {
       {/* <NewArrival1 newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} /> */}
       <Reviews />
       <Testimonial />
-      <TopSellingProducts collection={top_selling_products}/>
-      {/* <TopSellingProducts1 collection={top_selling_products}/> */}
+      {/* <TopSellingProducts collection={top_selling_products}/> */}
+      <TopSellingProducts1 collection={top_selling_products}/>
       <UserSignup />
       <Blogs articles={articles} />
       
