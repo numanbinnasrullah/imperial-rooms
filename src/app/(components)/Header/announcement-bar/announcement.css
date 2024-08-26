@@ -1,0 +1,16 @@
+.promo-code {
+    color: yellow;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+  .transition-opacity {
+    transition: opacity 0.5s ease-in-out;
+  }
