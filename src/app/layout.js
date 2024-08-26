@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-// import Header from "./(components)/Header/Header";
+import Header from "./(components)/Header/Header";
 // import Footer from "./(components)/Footer/Footer";
 import ReduxProvider from "@/store/reduxProvider";
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       </head> */}
       <body >
         <ReduxProvider>
-          {/* <Header /> */}
+          <Header />
           {children}
           {/* <Footer /> */}
         </ReduxProvider>
