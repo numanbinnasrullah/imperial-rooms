@@ -4,6 +4,25 @@
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
 
+@font-face {
+  font-family: 'Futura PT';
+  src:  url('/fonts/FuturaPT-Book.woff') format('woff'),
+       
+}
+@font-face {
+  font-family: 'Biorhyme';
+  src:  url('/fonts/biorhyme.regular.woff') format('woff');
+}
+body {
+  font-family: 'Futura PT', sans-serif;
+  font-size: 17px;
+  color: #000;
+}
+h2, button{
+  font-family: 'Biorhyme', serif;
+  /* font-size: 17px; */
+  color: #000;
+}
 .search-sidebar-container:hover .one .close-button {
     opacity: 1;
     transform: translateY(0);

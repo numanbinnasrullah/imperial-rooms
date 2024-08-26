@@ -7,7 +7,7 @@
   font-size: 50px;
   color: #fff;
   font-weight: 500;
-  height: 500px;
+  height: 540px;
   max-height: 100vh;
 }
 
@@ -111,9 +111,9 @@
 
 
 .product_img{
-    width: 100%;
-    height: 300px;
+    /* width: 100%; */
+    /* height: 300px; */
     /* border: 1px solid #000; */
-    background: #F2F2F2;
+    /* background: #F2F2F2; */
 
 }

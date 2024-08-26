@@ -2,7 +2,7 @@
 
 import { BsArrowUpRight } from "react-icons/bs";
 
-const NewArrival = () => {
+const NewArrival1 = ({newArrival_1, newArrival_2, newArrival_3}) => {
   return (
     <>
         <div className="xl:w-[75%] lg:w-[90%] mx-auto lg:h-[800px]  flex flex-col lg:flex-row space-y-10" >
@@ -12,7 +12,7 @@ const NewArrival = () => {
 
                   <div className="w-[70%] ">
                     <div className="w-full ">
-                        <h2 className="xl:text-6xl lg:text-5xl text-2xl text-center  md:text-4xl  lg:text-left md:text-center text-black" >New Arrival on Store</h2>
+                        <h2 className="xl:text-6xl lg:text-5xl text-2xl text-center  md:text-4xl  lg:text-left md:text-center text-black" >New Arrival_1 on Store</h2>
                         <p className="mt-2 text-md lg:leading-7 text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>
                         <div className="text-right">
                             <button className="p-4 ">
@@ -45,4 +45,4 @@ const NewArrival = () => {
   )
 }
 
-export default NewArrival
+export default NewArrival1

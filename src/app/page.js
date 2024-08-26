@@ -1,4 +1,5 @@
 
+import homePageQuery from "@/graphql/homePage/homepage";
 import Blogs from "./(components)/Homepage/blogs/Blogs";
 import GridSlider from "./(components)/Homepage/grid-slider/GridSlider";
 import Hero from "./(components)/Homepage/hero-banner/Hero";
@@ -10,22 +11,34 @@ import ShopByCategory from "./(components)/Homepage/Shop-By-Category/ShopByCateg
 import Testimonial from "./(components)/Homepage/testimonial/Testimonial";
 import { TopSellingProducts } from "./(components)/Homepage/top-selling-products/TopSellingProducts";
 import UserSignup from "./(components)/Homepage/user-signup/UserSignup";
+import NewArrival1 from "./(components)/Homepage/new-arrival/NewArrival copy";
+import { TopSellingProducts1 } from "./(components)/Homepage/top-selling-products/TopSellingProducts copy";
 
 
-export default function Home() {
+export default async function Home() {
+  const homePageData = await homePageQuery()
+  const {collection1, collection2, collection3, collection4, Home_Collection_New_Arrivals_1, Home_Collection_New_Arrivals_2, Home_Collection_New_Arrivals_3, top_selling_products, articles} = homePageData?.data
+ console.log("cooo", articles)
   const isVideoShow = false;
   return (
+    
     <>
       
       {isVideoShow ? <HeroVideo /> : <Hero />}
-      <ShopByCategory />
-      <NewArrival />
+      <ShopByCategory collections={[collection1, collection2, collection3, collection4]} />
+      <NewArrival newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} />
+      {/* <NewArrival1 newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} /> */}
       <Reviews />
       <Testimonial />
-      <TopSellingProducts />
+      {/* <TopSellingProducts collection={top_selling_products}/> */}
+      <TopSellingProducts1 collection={top_selling_products}/>
       <UserSignup />
-      <Blogs />
+      <Blogs articles={articles} />
+      
     </>
 
   );
 }
+
+
+

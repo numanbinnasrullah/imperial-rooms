@@ -11,8 +11,8 @@ const Testimonial = () => {
               <div key={index} className="p-6 text-center">
                 {/* <item.icon className="text-5xl mx-auto mb-2" /> */}
                 {item.icon}
-                <h3 className="text-sm font-bold text-gray-900">{item.title}</h3>
-                <p className="mt-1 text-sm">{item.description}</p>
+                <h3 className="text-md font-bold text-gray-900">{item.title}</h3>
+                <p className="mt-1 text-md">{item.description}</p>
               </div>
             ))}
           </div>

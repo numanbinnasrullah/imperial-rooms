@@ -4,7 +4,7 @@ import Header from "./(components)/Header/Header";
 import Footer from "./(components)/Footer/Footer";
 import ReduxProvider from "@/store/reduxProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </head> */}
-      <body className={inter.className}>
+      <body >
         <ReduxProvider>
           <Header />
           {children}

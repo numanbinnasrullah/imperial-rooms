@@ -8,6 +8,7 @@ import Sidebar from '../sidebar/Sidebar';
 import SearchSidebar from '../searchbar/searchSidebar';
 import Image from 'next/image';
 import Link from 'next/link';
+import Search1 from '../searchbar/Search1';
 const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchbar}) => {
     // const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -22,7 +23,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     {/* Phone Number */}
                     <div className="flex flex-col text-md  md:mb-0 ">
                         <div className='hidden md:block'>
-                        <div className='text-xs ml-6'>Help Line</div>
+                        <div className='text-sm ml-6'>Help Line</div>
                         <div>
                         <span> <PiPhoneIncomingLight className="inline-block h-5 w-5  "  /> </span> <span className='underline text-md'> +123 456 7890</span>
                         </div>
@@ -51,15 +52,16 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     </div>
 
                     {/* Icons and Rating */}
-                    <div className="flex items-center space-x-4 max-sm:space-x-3">
+                    <div className="relative flex items-center space-x-4 max-sm:space-x-3">
                     <div className="hidden lg:flex space-x-1 lg:mr-4">
-                        <FaStar className="text-yellow-500" />
-                        <FaStar className="text-yellow-500" />
-                        <FaStar className="text-yellow-500" />
-                        <FaStar className="text-yellow-500" />
-                        <FaStar className="text-yellow-500" />
+                        <FaStar className="text-yellow-500 text-xs" />
+                        <FaStar className="text-yellow-500 text-xs" />
+                        <FaStar className="text-yellow-500 text-xs" />
+                        <FaStar className="text-yellow-500 text-xs" />
+                        <FaStar className="text-yellow-500 text-xs" />
                     </div>
-                        <a href="#" className="text-2xl hover:text-gray-400 hidden md:block"><FiSearch /></a>
+                        {/* <a href="#" className="text-2xl hover:text-gray-400 hidden md:block"><FiSearch /></a> */}
+                        <Search1 />
                         <a href="#" className="text-2xl hover:text-gray-400"><FiUser /></a>
                         <a href="#" className="text-xl hover:text-gray-400"><FiHeart /></a>
                         <a href="#" className="text-xl hover:text-gray-400"><FiShoppingCart /></a>

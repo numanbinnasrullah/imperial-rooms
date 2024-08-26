@@ -1,7 +1,7 @@
 import { graphql } from "../graphql";
 
 const menuQuery = async() => {
-  console.log("Menu ki GraphQL")
+
     const query = `
     query HomePageQuery{
         menu(handle: "${process.env.Navigation_Menu}") {

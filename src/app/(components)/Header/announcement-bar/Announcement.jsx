@@ -21,7 +21,7 @@ const Announcement = () => {
   }, [statements]);
 
   return (
-    <div className={`relative bg-[#484556] text-white text-sm p-3 mx-auto transition-all duration-500 ${fade ? 'fade-in' : 'fade-out'}`}>
+    <div className={`relative bg-[#484556] text-white text-lg p-3 mx-auto transition-all duration-500 ${fade ? 'fade-in' : 'fade-out'}`}>
     <p className="text-center" dangerouslySetInnerHTML={{ __html: statements[currentMessageIndex].text }}></p>
   </div>
   );
