@@ -1,5 +1,5 @@
 
-// import homePageQuery from "@/graphql/homePage/homepage";
+import homePageQuery from "@/graphql/homePage/homepage";
 // import Blogs from "./(components)/Homepage/blogs/Blogs";
 // import GridSlider from "./(components)/Homepage/grid-slider/GridSlider";
 import Hero from "./(components)/Homepage/hero-banner/Hero";
