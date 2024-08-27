@@ -58,7 +58,7 @@ const Blogs = ({articles}) => {
                                             {item?.node?.title}
                                         </Link>
                                         <p className="mt-1 dark:text-gray-300 md:text-md outline-none focus:outline-none">
-                                            {`${item?.node?.content.split(' ').slice(0, 18).join(' ')} . . .`}
+                                            {`${item?.node?.content.split(' ').slice(0, 25).join(' ')} . . .`}
                                         </p>
                                         <div className="flex w-full">
                                             <div className="w-[30%]">
