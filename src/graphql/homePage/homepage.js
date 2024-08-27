@@ -81,7 +81,7 @@ const homePageQuery = async() => {
           }
     
         
-           articles(first:3) {
+           articles(first:10) {
             edges {
               node {
                     id

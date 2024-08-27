@@ -16,8 +16,8 @@ const NewArrival = () => {
                         <p className="mt-2 text-md lg:leading-7 text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry </p>
                         <div className="text-right">
                             <button className="p-4 ">
-                              <span className="text-lg text-black mr-1"> Browse </span>
-                              <BsArrowUpRight className="inline-block text-lg text-black" />
+                              <span className="text-xl text-black mr-1"> Browse </span>
+                              <BsArrowUpRight className="inline-block text-xl text-black" />
                             </button>
                         </div>
                     </div>

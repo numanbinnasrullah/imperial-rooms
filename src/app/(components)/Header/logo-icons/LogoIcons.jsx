@@ -19,7 +19,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
     return (
         <>
             <header className="w-full text-[#000] py-2 max-sm:py-2 border-b-[1px]">
-                <div className="w-full md:max-w-[81%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center px-4" >
+                <div className="w-full lg:max-w-[90%] xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center px-4" >
                     {/* Phone Number */}
                     <div className="flex flex-col text-md  md:mb-0 ">
                         <div className='hidden md:block'>
@@ -52,19 +52,24 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     </div>
 
                     {/* Icons and Rating */}
-                    <div className="relative flex items-center space-x-4 max-sm:space-x-3">
-                    <div className="hidden lg:flex space-x-1 lg:mr-4">
-                        <FaStar className="text-yellow-500 text-xs" />
-                        <FaStar className="text-yellow-500 text-xs" />
-                        <FaStar className="text-yellow-500 text-xs" />
-                        <FaStar className="text-yellow-500 text-xs" />
-                        <FaStar className="text-yellow-500 text-xs" />
+                    <div className="relative flex items-center space-x-2 lg:space-x-5 max-sm:space-x-3">
+                    <div className="hidden lg:flex space-x-1 xl:mr-7 flex-col">
+                       <div className='flex space-x-1.5'>
+                        <FaStar className="text-yellow-500 text-sm" />
+                        <FaStar className="text-yellow-500 text-sm" />
+                        <FaStar className="text-yellow-500 text-sm" />
+                        <FaStar className="text-yellow-500 text-sm" />
+                        <FaStar className="text-yellow-500 text-sm" />
+                       </div>
+                       <div className='text-sm'>
+                        4.5+ ratings on Fifo
+                       </div>
                     </div>
                         {/* <a href="#" className="text-2xl hover:text-gray-400 hidden md:block"><FiSearch /></a> */}
                         <Search1 />
                         <a href="#" className="text-2xl hover:text-gray-400"><FiUser /></a>
-                        <a href="#" className="text-xl hover:text-gray-400"><FiHeart /></a>
-                        <a href="#" className="text-xl hover:text-gray-400"><FiShoppingCart /></a>
+                        <a href="#" className="text-2xl hover:text-gray-400"><FiHeart /></a>
+                        <a href="#" className="text-2xl hover:text-gray-400"><FiShoppingCart /></a>
                     </div>
                 </div>
             </header>

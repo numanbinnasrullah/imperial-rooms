@@ -84,7 +84,7 @@ export const TopSellingProducts1 = ({ collection }) => {
     <>
       <div className="flex items-center  md:justify-end justify-center space-x-10 w-full md:w-[50%] lg:w-[35%] xl:w-[33%]">
         <h2 className="md:text-[21px] text-[16px] font-medium">Top Selling Products</h2>
-        <button className="py-4"><span className=" md:text-lg text-md"> Browse  <BsArrowUpRight className="inline-block text-lg text-black" /></span> </button>
+        <button className="py-4"><span className=" md:text-lg text-md text-[#a5a4aa]"> Browse  <BsArrowUpRight className="inline-block text-lg text-[#a5a4aa]" /></span> </button>
       </div>
       <div className="px-10 py-3">
         <div className="navigation-wrapper">
