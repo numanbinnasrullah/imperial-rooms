@@ -28,7 +28,7 @@ const Hero = () => {
       <Heroskeleton />
     ) : (
       <>
-        <div style={{height: fixedHeight ? '820px' : 'auto',}}>
+        <div style={{height: fixedHeight ? '830px' : 'auto',}}>
           <a href=''>
             <div className="desktop-banner-img" id="Banner-desk" data-blink-loader></div>
           </a>
