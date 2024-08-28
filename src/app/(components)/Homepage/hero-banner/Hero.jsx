@@ -1,20 +1,36 @@
-
+'use client'
+import { useEffect, useState } from 'react';
 import './HeroBanner.css'
+import Heroskeleton from './skeleton';
 const Hero = () => {
+  const [showBanner, setShowBanner] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBanner(true);
+    }, 2000); // 2 seconds delay
+
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
   return (
     <>
-         <div>
-      <a href=''>
-        <div class="desktop-banner-img" id="Banner-desk" data-blink-loader></div>
-      </a>
-    </div>
-
-    <div>
-      <a href=''>
-        <div class="mobile-banner-img" id="Banner-mob" data-blink-loader></div>
-      </a>
-    </div>
-    </>
+    {!showBanner ? (
+      <Heroskeleton />
+    ) : (
+      <>
+        <div>
+          <a href=''>
+            <div className="desktop-banner-img" id="Banner-desk" data-blink-loader></div>
+          </a>
+        </div>
+        <div>
+          <a href=''>
+            <div className="mobile-banner-img" id="Banner-mob" data-blink-loader></div>
+          </a>
+        </div>
+      </>
+    )}
+  </>
   )
 }
 
