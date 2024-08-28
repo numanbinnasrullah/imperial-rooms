@@ -1,0 +1,50 @@
+/* Variables */
+/* :root {
+    --skeleton-color: #e0e0e0;
+    --skeleton-width: 1200px;
+    --skeleton-offset: 100px;
+  
+    --image-height: 150px;
+  
+    --line-height: 16px;
+    --line-1-width: 50%;
+    --line-2-width: 80%;
+  } */
+  
+  /* Skeleton animation */
+  @keyframes refresh {
+    0% {
+      background-position: calc(-1 * var(--skeleton-offset));
+    }
+    40%, 100% {
+      background-position: var(--skeleton-width);
+    }
+  }
+  
+  /* Skeleton styling */
+  .skeleton {
+    width: var(--skeleton-width);
+  }
+  
+  .image, .line {
+    background-image: linear-gradient(90deg, var(--skeleton-color) 0px, lighten(var(--skeleton-color), 5%) 30px, var(--skeleton-color) 60px);
+    background-size: calc(var(--skeleton-width) + var(--skeleton-offset));
+    animation: refresh 2s infinite ease-out;
+  }
+  
+  /* .image {
+    height: var(--image-height);
+  }
+  
+  .line {
+    height: var(--line-height);
+  }
+  
+  .line-1 {
+    width: var(--line-1-width);
+  }
+  
+  .line-2 {
+    width: var(--line-2-width);
+  } */
+  

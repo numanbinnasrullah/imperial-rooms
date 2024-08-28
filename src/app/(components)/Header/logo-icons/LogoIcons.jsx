@@ -1,21 +1,29 @@
 
 'use client'
+import { useEffect, useState } from 'react';
 import {  FaStar } from 'react-icons/fa';
 import { PiPhoneIncomingLight } from "react-icons/pi";
 import { FiSearch, FiUser, FiHeart, FiShoppingCart } from "react-icons/fi";
-import { useState } from 'react';
 import Sidebar from '../sidebar/Sidebar';
 import SearchSidebar from '../searchbar/searchSidebar';
 import Image from 'next/image';
 import Link from 'next/link';
 import Search1 from '../searchbar/Search1';
+import LogoSkeleton from '../../Skeletons/logoSkeleton/LogoSkeleton';
 const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchbar}) => {
     // const [sidebarOpen, setSidebarOpen] = useState(false);
 
     // const toggleSidebar = () => {
     //     setSidebarOpen(!sidebarOpen);
     // };
-
+    const [showBanner, setShowBanner] = useState(false);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setShowBanner(true);
+        }, 4000); // 2 seconds delay
+    
+        return () => clearTimeout(timer); // Cleanup the timer on component unmount
+      }, []);
     return (
         <>
             <header className="w-full text-[#000] py-4 max-sm:py-2 border-b-[1px]">
@@ -44,12 +52,17 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     </div>
 
                     {/* Logo */}
+                    {
+                        !showBanner ? (<LogoSkeleton />) : (
                     <div className="w-2xl text-center md:mb-0 ml-12 max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48">
                         <Link href={"/"}>
                         <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
                         
                         </Link>
                     </div>
+                        )
+                    }
+                    
 
                     {/* Icons and Rating */}
                     <div className="relative flex items-center space-x-2 lg:space-x-5 max-sm:space-x-3">
