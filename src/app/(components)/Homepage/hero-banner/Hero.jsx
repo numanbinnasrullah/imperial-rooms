@@ -8,7 +8,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBanner(true);
-    }, 1000); // 2 seconds delay
+    }, 4000); // 2 seconds delay
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);
