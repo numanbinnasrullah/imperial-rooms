@@ -28,14 +28,14 @@ const Hero = () => {
       <Heroskeleton />
     ) : (
       <>
-        <div style={{height: fixedHeight ? '830px' : 'auto',}}>
+        <div >
           <a href=''>
-            <div className="desktop-banner-img" id="Banner-desk" data-blink-loader></div>
+            <div className="desktop-banner-img" id="Banner-desk" data-blink-loader style={{height: fixedHeight ? '830px' : 'auto',}}></div>
           </a>
         </div>
         <div>
           <a href=''>
-            <div className="mobile-banner-img" id="Banner-mob" data-blink-loader></div>
+            <div className="mobile-banner-img" id="Banner-mob" data-blink-loader style={{height: fixedHeight ? '830px' : 'auto',}}></div>
           </a>
         </div>
       </>
