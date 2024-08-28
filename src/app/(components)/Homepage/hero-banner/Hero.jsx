@@ -1,49 +1,50 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
-import lottie from 'lottie-web';
+import { useEffect, useState } from 'react';
 import './HeroBanner.css';
 
 const Hero = () => {
-  const desktopLoader = useRef(null);
-  const mobileLoader = useRef(null);
+  const [isDesktopLoaded, setDesktopLoaded] = useState(false);
+  const [isMobileLoaded, setMobileLoaded] = useState(false);
 
   useEffect(() => {
-    const desktopAnimation = lottie.loadAnimation({
-      container: desktopLoader.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'path-to-your-lottie-json-file.json' // Replace with the path to your Lottie JSON file
-    });
+    const desktopImg = new Image();
+    const mobileImg = new Image();
 
-    const mobileAnimation = lottie.loadAnimation({
-      container: mobileLoader.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'path-to-your-lottie-json-file.json' // Replace with the path to your Lottie JSON file
-    });
+    desktopImg.src = '/Desktop.png';
+    mobileImg.src = '/mobile.png';
 
-    return () => {
-      desktopAnimation.destroy();
-      mobileAnimation.destroy();
-    };
+    desktopImg.onload = () => setDesktopLoaded(true);
+    mobileImg.onload = () => setMobileLoaded(true);
   }, []);
 
   return (
     <>
       <div>
         <a href=''>
-          <div className="desktop-banner-img" id="Banner-desk" data-blink-loader>
-            <div className="loader" ref={desktopLoader}></div>
+          <div className="desktop-banner-img" id="Banner-desk">
+            {!isDesktopLoaded && <div className="skeleton-loader"></div>}
+            {isDesktopLoaded && (
+              <div
+                style={{
+                  backgroundImage: `url('/Desktop.png')`,
+                }}
+              ></div>
+            )}
           </div>
         </a>
       </div>
 
       <div>
         <a href=''>
-          <div className="mobile-banner-img" id="Banner-mob" data-blink-loader>
-            <div className="loader" ref={mobileLoader}></div>
+          <div className="mobile-banner-img" id="Banner-mob">
+            {!isMobileLoaded && <div className="skeleton-loader"></div>}
+            {isMobileLoaded && (
+              <div
+                style={{
+                  backgroundImage: `url('/mobile.png')`,
+                }}
+              ></div>
+            )}
           </div>
         </a>
       </div>
