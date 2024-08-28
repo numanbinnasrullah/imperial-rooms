@@ -46,11 +46,11 @@ const Hero = () => {
       <div className="banner-wrapper">
         <a href=''>
           <div
-            className="mobile-banner-img"
-            id="Banner-mob"
+           
+            
             
           >
-            <Image data-src="/mobile.png" width={500} height={500}></Image>
+            <Image data-src="/mobile.png" width={500} height={500}  className="mobile-banner-img" id="Banner-mob"></Image>
           </div>
         </a>
       </div>
