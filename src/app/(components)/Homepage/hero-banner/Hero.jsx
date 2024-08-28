@@ -9,16 +9,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBanner(true);
-    }, 1000); // 2 seconds delay
-
-    return () => clearTimeout(timer); // Cleanup the timer on component unmount
-  }, []);
-
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFixedHeight(false);
-    }, 10000); // 10 seconds
+    }, 3000); // 2 seconds delay
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);
@@ -28,14 +19,14 @@ const Hero = () => {
       <Heroskeleton />
     ) : (
       <>
-        <div >
+        <div>
           <a href=''>
-            <div className="desktop-banner-img" id="Banner-desk" data-blink-loader style={{height: fixedHeight ? '830px' : 'auto',}}></div>
+            <div className="desktop-banner-img" id="Banner-desk" data-blink-loader></div>
           </a>
         </div>
         <div>
           <a href=''>
-            <div className="mobile-banner-img" id="Banner-mob" data-blink-loader style={{height: fixedHeight ? '830px' : 'auto',}}></div>
+            <div className="mobile-banner-img" id="Banner-mob" data-blink-loader></div>
           </a>
         </div>
       </>
