@@ -12,7 +12,7 @@ display: none;
     background-repeat: no-repeat;
     cursor: pointer;
     width: 100%;
-    padding-top: 146.64%; /* (img-height / img-width * width) */
+    padding-top: 146.64%; /* Maintain aspect ratio */
   }
 }
 
@@ -24,11 +24,12 @@ display: none;
 display: none;
 }
 .desktop-banner-img {
+    display: block;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     width: 100%;
-    padding-top: 42.64%; /* (img-height / img-width * width) */
+    padding-top: 42.64%; /* Maintain aspect ratio */
   }
 
 }
