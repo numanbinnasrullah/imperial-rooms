@@ -16,11 +16,11 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
     // const toggleSidebar = () => {
     //     setSidebarOpen(!sidebarOpen);
     // };
-    const [showBanner, setShowBanner] = useState(false);
+    const [showBanner, setShowBanner] = useState(true);
     useEffect(() => {
         const timer = setTimeout(() => {
-          setShowBanner(true);
-        }, 1000); // 2 seconds delay
+          setShowBanner(false);
+        }, 2000); // 2 seconds delay
     
         return () => clearTimeout(timer); // Cleanup the timer on component unmount
       }, []);
@@ -53,7 +53,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
 
                     {/* Logo */}
                     {
-                        !showBanner ? (<LogoSkeleton />) : (
+                        showBanner ? (<LogoSkeleton />) : (
                     <div className="w-2xl text-center md:mb-0 ml-12 max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48">
                         <Link href={"/"}>
                         <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
