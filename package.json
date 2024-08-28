@@ -16,6 +16,7 @@
     "graphql": "^16.9.0",
     "graphql-request": "^7.1.0",
     "keen-slider": "^6.8.6",
+    "lottie-web": "^5.12.2",
     "next": "14.2.5",
     "puppeteer": "^23.0.1",
     "react": "^18",

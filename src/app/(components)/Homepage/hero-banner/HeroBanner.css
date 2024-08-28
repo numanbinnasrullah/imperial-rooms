@@ -1,44 +1,37 @@
-
-
-
-@media screen and (max-width: 640px) {
-.desktop-banner-img{
-display: none;
-}
-.desc_video{
-display: none;
-}
-.mobile-banner-img {
-    display: block;
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .desktop-banner-img,
+  .mobile-banner-img {
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     width: 100%;
-    padding-top: 146.64%; /* Maintain aspect ratio */
+    padding-top: 42.64%; /* For desktop */
   }
-}
-
-@media screen and (min-width: 641px) {
-.mobile-banner-img{
-display: none;
-}
-.mobile_video{
-display: none;
-}
-.desktop-banner-img {
-    display: block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    width: 100%;
-    padding-top: 42.64%; /* Maintain aspect ratio */
+  
+  @media screen and (max-width: 640px) {
+    .desktop-banner-img {
+      display: none;
+    }
+    .mobile-banner-img {
+      display: block;
+      padding-top: 146.64%; /* For mobile */
+    }
   }
-
-}
-.desc_video{
-margin: 0px auto;
-}
-.responsive-iframe{
-width: 100%;
-height: auto;
-}
+  
+  @media screen and (min-width: 641px) {
+    .mobile-banner-img {
+      display: none;
+    }
+    .desktop-banner-img {
+      display: block;
+    }
+  }
+  
