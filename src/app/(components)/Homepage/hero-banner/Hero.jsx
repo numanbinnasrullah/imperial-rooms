@@ -5,7 +5,7 @@ import './HeroBanner.css';
 const Hero = () => {
   useEffect(() => {
     const lazyLoadBanners = (entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach(entry => { 
         if (entry.isIntersecting) {
           const banner = entry.target;
           const imgSrc = banner.getAttribute('data-src');
