@@ -1,10 +1,8 @@
 'use client'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './HeroBanner.css';
 
 const Hero = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const lazyLoadBanners = (entries, observer) => {
       entries.forEach(entry => {
@@ -14,17 +12,14 @@ const Hero = () => {
           if (imgSrc) {
             banner.style.backgroundImage = `url(${imgSrc})`;
             observer.unobserve(banner); // Stop observing once the image is loaded
-            setTimeout(() => {
-              setIsLoading(false); // Hide skeleton after 1 second
-            }, 1000);
           }
         }
       });
     };
 
-     const observer = new IntersectionObserver(lazyLoadBanners, {
-      rootMargin: '0px 0px 50px 0px',
-      threshold: 0.1
+    const observer = new IntersectionObserver(lazyLoadBanners, {
+      rootMargin: '0px 0px 50px 0px', // Load the image a bit before it comes fully into view
+      threshold: 0.1 // Start loading when 10% of the banner is visible
     });
 
     const banners = document.querySelectorAll('[data-src]');
@@ -37,19 +32,15 @@ const Hero = () => {
 
   return (
     <>
-      <div className="banner-wrapper">
+      <div>
         <a href=''>
-          <div className={`desktop-banner-img ${isLoading ? 'loading' : ''}`} id="Banner-desk" data-src="/Desktop.png">
-            {isLoading && <div className="skeleton-loader"></div>}
-          </div>
+          <div className="desktop-banner-img" id="Banner-desk" data-src="/Desktop.png"></div>
         </a>
       </div>
 
-      <div className="banner-wrapper">
+      <div>
         <a href=''>
-          <div className={`mobile-banner-img ${isLoading ? 'loading' : ''}`} id="Banner-mob" data-src="/mobile.png">
-            {isLoading && <div className="skeleton-loader"></div>}
-          </div>
+          <div className="mobile-banner-img" id="Banner-mob" data-src="/mobile.png"></div>
         </a>
       </div>
     </>
