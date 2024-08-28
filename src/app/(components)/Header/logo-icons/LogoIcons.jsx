@@ -20,7 +20,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
     useEffect(() => {
         const timer = setTimeout(() => {
           setShowBanner(false);
-        }, 4000); // 2 seconds delay
+        }, 2000); // 2 seconds delay
     
         return () => clearTimeout(timer); // Cleanup the timer on component unmount
       }, []);
