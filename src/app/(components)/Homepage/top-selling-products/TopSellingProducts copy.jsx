@@ -11,11 +11,11 @@ import Image from "next/image";
 import Skeleton from "./Skeleton";
 
 export const TopSellingProducts1 = ({ collection }) => {
-  {
-    collection?.products?.edges.map((item, index)=>{
-        console.log("Producsts", item)
-    })
-  }
+  // {
+  //   collection?.products?.edges.map((item, index)=>{
+  //       console.log("Producsts", item)
+  //   })
+  // }
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [loading, setLoading] = useState(true);
@@ -118,7 +118,7 @@ export const TopSellingProducts1 = ({ collection }) => {
               const uniqueComparePrices = [...new Set(compareAtPrices)].sort((a, b) => a - b);
               const lowestPrice = uniquePrices[0];
               const lowestComparePrice = uniqueComparePrices[0];
-              console.log("Selected Options", selectedOptions)
+              // console.log("Selected Options", selectedOptions)
               
               return ( 
                 
@@ -175,7 +175,7 @@ export const TopSellingProducts1 = ({ collection }) => {
                     {uniqueColors.map((color, colorIndex) => {
                       const cleanColor = color.trim().toLowerCase(); // Remove spaces and make lowercase
                       const hexColor = colorHexMap[cleanColor] || "#D3D3D3"; // Default to light gray if color not found
-                      console.log(`Color: ${cleanColor}, Hex: ${hexColor}`);
+                      // console.log(`Color: ${cleanColor}, Hex: ${hexColor}`);
                       return (
                         <div key={colorIndex} className="w-6 h-6 rounded-md border-2 border-transparent hover:border-2 hover:border-[#000] " style={{ backgroundColor: hexColor }}></div>
                       );

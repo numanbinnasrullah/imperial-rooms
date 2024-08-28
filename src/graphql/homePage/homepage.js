@@ -87,6 +87,7 @@ const homePageQuery = async() => {
                     id
                     title
                     handle
+                    publishedAt
                     content  
                     image {
                       url

@@ -18,12 +18,12 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
 
     return (
         <>
-            <header className="w-full text-[#000] py-2 max-sm:py-2 border-b-[1px]">
+            <header className="w-full text-[#000] py-4 max-sm:py-2 border-b-[1px]">
                 <div className="w-full md:max-w-[90%]  xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center px-4" >
                     {/* Phone Number */}
                     <div className="flex flex-col text-md  md:mb-0 ">
                         <div className='hidden md:block'>
-                        <div className='text-sm ml-6'>Help Line</div>
+                        <div className='text-md ml-6'>Help Line</div>
                         <div>
                         <span> <PiPhoneIncomingLight className="inline-block h-5 w-5  "  /> </span> <span className='underline text-md'> +123 456 7890</span>
                         </div>
@@ -69,7 +69,9 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                         <Search1 />
                         <a href="#" className="text-2xl hover:text-gray-400"><FiUser /></a>
                         <a href="#" className="text-2xl hover:text-gray-400"><FiHeart /></a>
-                        <a href="#" className="text-2xl hover:text-gray-400"><FiShoppingCart /></a>
+                        <a href="#" className="text-2xl hover:text-gray-400 relative"><FiShoppingCart />
+                        <span className='absolute bottom-5 left-4 text-xs bg-green-600 px-1 py-.5 rounded-full text-white'>1</span>
+                        </a>
                     </div>
                 </div>
             </header>
