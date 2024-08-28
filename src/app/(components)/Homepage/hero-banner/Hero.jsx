@@ -1,6 +1,7 @@
 'use client'
 import { useEffect } from 'react';
 import './HeroBanner.css';
+import Image from 'next/image';
 
 const Hero = () => {
   useEffect(() => {
@@ -47,8 +48,10 @@ const Hero = () => {
           <div
             className="mobile-banner-img"
             id="Banner-mob"
-            data-src="/mobile.png"
-          ></div>
+            
+          >
+            <Image data-src="/mobile.png" width={500} height={500}></Image>
+          </div>
         </a>
       </div>
     </>
