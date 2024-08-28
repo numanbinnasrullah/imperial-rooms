@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./(components)/Header/Header";
 import Footer from "./(components)/Footer/Footer";
 import ReduxProvider from "@/store/reduxProvider";
+import Head from "next/head";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
       <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </head> */}
-      {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/2.0.1/spinkit.min.css" /> */}
+      <Head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/2.0.1/spinkit.min.css" />
+      </Head>
 
       <body style={{backgroundColor:"#fff"}}>
         <ReduxProvider>
