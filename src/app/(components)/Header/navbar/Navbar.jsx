@@ -5,6 +5,7 @@ import { useGetMenuQuery } from "@/store/services/homePageService";
 import Link from "next/link";
 import { useEffect } from "react";
 import Loading from "./Loading";
+import MenuSkeleton from "../../Skeletons/navbarSkeleton/NavbarSkeleton";
 
 const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
   const {data, isLoading} =  useGetMenuQuery();
@@ -34,10 +35,12 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
   return (
     <>
       {/* Navbar */}
-      {
+      
+      { 
         
         <nav className={`w-full text-center min-h-9 py-0 ${hiddenOnMd ? 'hidden md:block' : 'md:block'}`}>
         <ul className={`flex justify-center flex-wrap  space-x-4  text-black  ${hiddenOnMd ? 'items-center' : 'flex-col border-b-2'}`}>
+        {isLoading && <MenuSkeleton /> }
        {
          data?.res?.data?.menu?.items?.length > 0 && (
            data?.res?.data?.menu?.items?.map(mainItem => (
