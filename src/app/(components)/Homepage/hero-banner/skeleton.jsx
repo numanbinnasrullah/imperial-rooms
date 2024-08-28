@@ -8,6 +8,6 @@ const Heroskeleton = () => {
   <p class="line"></p>
 </article>
   )
-}
+}   
 
 export default Heroskeleton
