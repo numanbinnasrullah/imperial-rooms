@@ -26,7 +26,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
       }, []);
     return (
         <>
-            <header className="w-[100vw] text-[#000] h-28 flex  max-sm:py-2 border-b-[1px]">
+            <header className="w-[100%] text-[#000] h-28 flex  max-sm:py-2 border-b-[1px]">
                 <div className="w-full md:max-w-[90%] h-[100%]  xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center " >
                     {/* Phone Number */}
                     <div className="flex flex-col justify-center text-md  items-center md:mb-0 w-[30%] h-[100%] ">
@@ -57,7 +57,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     {/* Logo */}
                     {
                         (
-                    <div className="w-2xl text-center md:mb-0 max-sm:ml-10 max-md:ml-16 flex justify-center w-[35%] h-[100%] flex items-center">
+                    <div className="w-2xl text-center md:mb-0 max-sm:ml-10 max-md:ml-16 flex justify-center w-[35%] h-[100%] items-center">
                         <Link href={"/"}>
                         <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
                         

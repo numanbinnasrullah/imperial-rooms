@@ -26,7 +26,7 @@ const Announcement = () => {
   if (!isVisible) return null; // If not visible, return null to hide the component
 
   return (
-    <div className={`w-[100vw] relative bg-[#484556] flex justify-center items-center text-white text:sm md:text-lg h-10 transition-all duration-500 ${fade ? 'fade-in' : 'fade-out'}`}>
+    <div className={`w-[100%] relative bg-[#484556] flex justify-center items-center text-white text:sm md:text-lg h-10 transition-all duration-500 ${fade ? 'fade-in' : 'fade-out'}`}>
       <p className="text-center" dangerouslySetInnerHTML={{ __html: statements[currentMessageIndex].text }}></p>
       <button
         className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white hover:text-gray-300"
