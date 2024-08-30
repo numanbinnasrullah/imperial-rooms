@@ -57,7 +57,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     {/* Logo */}
                     {
                         (
-                    <div className="w-2xl text-center md:mb-0 ml-12 max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48">
+                    <div className="w-2xl text-center md:mb-0 ml-12  max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48 flex just">
                         <Link href={"/"}>
                         <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
                         
