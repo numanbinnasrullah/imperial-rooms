@@ -46,7 +46,7 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
            data?.res?.data?.menu?.items?.map(mainItem => (
              <li className={`group relative py-2`} key={mainItem?.id}>
              <Link href={`/collections/${getLastUrlPart(mainItem?.url)}`}
-               className={`hover:text-[#007bff] hover:fill-[#007bff]  text-md flex items-center justify-between  `}>
+               className={`hover:text-gray-600 hover:fill-gray-500  text-md flex items-center justify-between  `}>
                  <span>
                    {
                      hiddenOnMd ? "" : <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" class="mr-4 inline-block"
@@ -78,9 +78,9 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
              class='absolute top-15 max-lg:top-8 left-0 z-50 block space-y-1 shadow-lg bg-white max-h-0 overflow-hidden min-w-[250px] group-hover:opacity-100 group-hover:max-h-[700px] px-0 group-hover:pb-0 group-hover:pt-4 transition-all duration-500'>
                {
                  mainItem?.items?.map(subItem => (
-                   <li class='border-b py-2' key={subItem?.id}>
+                   <li class=' py-2' key={subItem?.id}>
                <Link href={`/collections/${getLastUrlPart(subItem?.url)}`}
-                 class='hover:text-[#007bff] hover:fill-[#007bff] text-md block nav-link'>
+                 class='hover:text-gray-600 hover:fill-gray-600 text-md block nav-link'>
                  {subItem?.title}
                </Link>
              </li>

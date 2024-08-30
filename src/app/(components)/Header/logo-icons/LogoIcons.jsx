@@ -26,7 +26,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
       }, []);
     return (
         <>
-            <header className="w-full text-[#000] py-4 max-sm:py-2 border-b-[1px]">
+            <header className="w-[100vw] text-[#000] py-4 max-sm:py-2 border-b-[1px]">
                 <div className="w-full md:max-w-[90%]  xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center px-4" >
                     {/* Phone Number */}
                     <div className="flex flex-col text-md  md:mb-0 ">
@@ -38,6 +38,9 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                         </div>
                       
                         <div>
+
+
+                            
                         <div id="toggleOpen" className='flex items-center ml-auto  md:hidden gap-1.5'>
                             <button onClick={toggleSidebar}>
                             <svg className="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

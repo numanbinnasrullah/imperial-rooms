@@ -6,7 +6,7 @@ const Reviews = () => {
       <div className="flex flex-col justify-center items-center lg:relative mt-16 lg:mt-0  w-[70%] mx-auto">
         <div>
           {/* Large Gradient Text */}
-          <h1 className="lg:text-[220px] md:text-[150px] text-[60px] font-black text-transparent bg-clip-text bg-gradient-to-b from-[#7b7b7d] via-[#eae9e9]  to-[#ffffff00] leading-tight ">
+          <h1 className="lg:text-[220px] md:text-[150px] text-[60px] font-black text-transparent bg-clip-text bg-gradient-to-b from-[#7b7b7d] via-[#f5f4f4]  to-[#ffffff00] leading-tight ">
             10.357+
           </h1>
         </div>
