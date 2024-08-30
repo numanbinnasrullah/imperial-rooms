@@ -27,9 +27,9 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
     return (
         <>
             <header className="w-[100vw] text-[#000] h-28 flex  max-sm:py-2 border-b-[1px]">
-                <div className="w-full md:max-w-[90%]  xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center px-4" >
+                <div className="w-full md:max-w-[90%] h-[100%]  xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center " >
                     {/* Phone Number */}
-                    <div className="flex flex-col text-md  md:mb-0 ">
+                    <div className="flex flex-col text-md  items-center md:mb-0 ">
                         <div className='hidden md:block'>
                             <div className='text-md ml-6'>Help Line</div>
                             <div>
@@ -56,14 +56,14 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
 
                     {/* Logo */}
                     {
-                    //     (
-                    // <div className="w-2xl text-center md:mb-0 ml-12 max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48">
-                    //     <Link href={"/"}>
-                    //     <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
+                        (
+                    <div className="w-2xl text-center md:mb-0 ml-12 max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48">
+                        <Link href={"/"}>
+                        <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
                         
-                    //     </Link>
-                    // </div>
-                    //     )
+                        </Link>
+                    </div>
+                        )
                     }
                     
 
