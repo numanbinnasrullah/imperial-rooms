@@ -31,10 +31,10 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     {/* Phone Number */}
                     <div className="flex flex-col text-md  md:mb-0 ">
                         <div className='hidden md:block'>
-                        <div className='text-md ml-6'>Help Line</div>
-                        <div>
-                        <span> <PiPhoneIncomingLight className="inline-block h-5 w-5  "  /> </span> <span className='underline text-md'> +123 456 7890</span>
-                        </div>
+                            <div className='text-md ml-6'>Help Line</div>
+                            <div>
+                            <span> <PiPhoneIncomingLight className="inline-block h-5 w-5  "  /> </span> <span className='underline text-md'> +123 456 7890</span>
+                            </div>
                         </div>
                       
                         <div>
@@ -56,19 +56,19 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
 
                     {/* Logo */}
                     {
-                        (
-                    <div className="w-2xl text-center md:mb-0 ml-12 max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48">
-                        <Link href={"/"}>
-                        <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
+                    //     (
+                    // <div className="w-2xl text-center md:mb-0 ml-12 max-sm:ml-10 max-md:ml-16 md:ml-10 lg:ml-48">
+                    //     <Link href={"/"}>
+                    //     <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
                         
-                        </Link>
-                    </div>
-                        )
+                    //     </Link>
+                    // </div>
+                    //     )
                     }
                     
 
                     {/* Icons and Rating */}
-                    <div className="relative flex items-center space-x-2 lg:space-x-5 max-sm:space-x-3">
+                    {/* <div className="relative flex items-center space-x-2 lg:space-x-5 max-sm:space-x-3">
                     <div className="hidden lg:flex space-x-1 xl:mr-7 flex-col">
                        <div className='flex space-x-1.5'>
                         <FaStar className="text-yellow-500 text-sm" />
@@ -81,14 +81,14 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                         4.5+ ratings on Fifo
                        </div>
                     </div>
-                        {/* <a href="#" className="text-2xl hover:text-gray-400 hidden md:block"><FiSearch /></a> */}
+                       
                         <Search1 />
                         <a href="#" className="text-2xl hover:text-gray-400"><FiUser /></a>
                         <a href="#" className="text-2xl hover:text-gray-400"><FiHeart /></a>
                         <a href="#" className="text-2xl hover:text-gray-400 relative"><FiShoppingCart />
                         <span className='absolute bottom-5 left-4 text-xs bg-green-600 px-1 py-.5 rounded-full text-white'>1</span>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </header>
             
