@@ -26,7 +26,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
       }, []);
     return (
         <>
-            <header className="w-[100vw] text-[#000] h-24 flex  max-sm:py-2 border-b-[1px]">
+            <header className="w-[100vw] text-[#000] h-28 flex  max-sm:py-2 border-b-[1px]">
                 <div className="w-full md:max-w-[90%]  xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center px-4" >
                     {/* Phone Number */}
                     <div className="flex flex-col text-md  md:mb-0 ">
