@@ -28,12 +28,12 @@ const Announcement = () => {
   return (
     <div className={`w-[100vw] relative bg-[#484556] text-white text-lg p-2 mx-auto transition-all duration-500 ${fade ? 'fade-in' : 'fade-out'}`}>
       <p className="text-center" dangerouslySetInnerHTML={{ __html: statements[currentMessageIndex].text }}></p>
-      <button
+      {/* <button
         className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white hover:text-gray-300"
         onClick={handleClose}
       >
         &times;
-      </button>
+      </button> */}
     </div>
   );
 }
