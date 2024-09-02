@@ -20,7 +20,7 @@ const Header = () => {
     <>
         <Announcement />
         <LogoIcons sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} toggleSearchbar={toggleSearchbar}  searchsidebarOpen={searchsidebarOpen} />
-        {/* <Navbar hiddenOnMd={true} setSidebarOpen={setSidebarOpen} /> */}
+        <Navbar hiddenOnMd={true} setSidebarOpen={setSidebarOpen} />
     </>
   )
 }

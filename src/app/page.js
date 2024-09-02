@@ -29,9 +29,9 @@ export default async function Home() {
         <NewArrival newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} />
         {/* <NewArrival1 newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} /> */}
         <Reviews />
-        // <Testimonial />
-        <TopSellingProducts collection={top_selling_products}/>
-        {/* <TopSellingProducts1 collection={top_selling_products}/> */}
+        <Testimonial />
+        {/* <TopSellingProducts collection={top_selling_products}/> */}
+        <TopSellingProducts1 collection={top_selling_products}/>
         <UserSignup />
         <Blogs articles={articles} />
       
