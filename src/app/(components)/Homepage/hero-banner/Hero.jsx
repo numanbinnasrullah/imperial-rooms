@@ -19,9 +19,9 @@ const Hero = () => {
       <Heroskeleton />
     ) : (
       <>
-        <div>
+        <div className='banner_contaner w-full'>
           <a href=''>
-            <div className="desktop-banner-img" id="Banner-desk" data-blink-loader></div>
+            <div className="desktop-banner-img" id="Banner-desk w-[100%]" data-blink-loader></div>
           </a>
         </div>
         <div>

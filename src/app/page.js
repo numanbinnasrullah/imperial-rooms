@@ -24,16 +24,16 @@ export default async function Home() {
     
     <>
       
-        {/* {isVideoShow ? <HeroVideo /> : <Hero />} */}
-        {/* <ShopByCategory collections={[collection1, collection2, collection3, collection4]} /> */}
-        {/* <NewArrival newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} /> */}
+        {isVideoShow ? <HeroVideo /> : <Hero />}
+        <ShopByCategory collections={[collection1, collection2, collection3, collection4]} />
+        <NewArrival newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} />
         {/* <NewArrival1 newArrival_1 = {Home_Collection_New_Arrivals_1} newArrival_2 = {Home_Collection_New_Arrivals_2} newArrival_3 =  {Home_Collection_New_Arrivals_3} /> */}
-        {/* <Reviews />
-        <Testimonial /> */}
-        {/* <TopSellingProducts collection={top_selling_products}/> */}
+        <Reviews />
+        // <Testimonial />
+        <TopSellingProducts collection={top_selling_products}/>
         {/* <TopSellingProducts1 collection={top_selling_products}/> */}
-        {/* <UserSignup /> */}
-        {/* <Blogs articles={articles} /> */}
+        <UserSignup />
+        <Blogs articles={articles} />
       
      
       

@@ -26,16 +26,17 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
       }, []);
     return (
         <>
-            <header className="w-[100%] text-[#000] h-28 flex  max-sm:py-2 border-b-[1px]">
+            <header className="w-[100%] text-[#000] h-24 md:h-28 flex  max-sm:py-2 border-b-[1px]">
                 <div className="w-full md:max-w-[90%] h-[100%]  xl:max-w-[75%] mx-auto max-md:py-0 flex md:flex-row justify-between items-center " >
                     {/* Phone Number */}
-                    <div className="flex flex-col justify-center text-md  items-center md:mb-0 w-[30%] h-[100%] ">
+                    <div className="flex flex-col justify-center text-md  items-center md:mb-0 w-[30%] md:w-[30%] h-[100%] ">
                         <div className='hidden md:block'>
                             <div className='text-md ml-6'>Help Line</div>
                             <div>
                             <span> <PiPhoneIncomingLight className="inline-block h-5 w-5  "  /> </span> <span className='underline text-md'> +123 456 7890</span>
                             </div>
                         </div>
+                        
                       
                         <div>
 
@@ -57,9 +58,9 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     {/* Logo */}
                     {
                         (
-                    <div className="w-2xl text-center md:mb-0 max-sm:ml-10 max-md:ml-16 flex justify-center w-[35%] h-[100%] items-center">
+                    <div className="w-2xl text-center md:mb-0 max-sm:ml-10 max-md:ml-16 flex justify-center w-[30%] md:w-[35%] h-[100%] items-center">
                         <Link href={"/"}>
-                        <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-20 max-sm:h-14 max-md:h-16" width={150} height={100} />
+                        <Image src="/logo_IR.svg" alt="Website Logo" className="mx-auto h-16 md:h-20 " width={150} height={100} />
                         
                         </Link>
                     </div>
@@ -68,7 +69,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                     
 
                     {/* Icons and Rating */}
-                    <div className="relative flex items-center justify-around max-sm:space-x-3 w-[30%] h-[100%] ">
+                    <div className="relative flex items-center justify-around max-sm:space-x-3 w-[30%] md:w-[30%] lg:w-[35%] xl:w-[30%] h-[100%] ">
                     <div className="hidden lg:flex space-x-1 flex-col">
                        <div className='flex space-x-1.5'>
                         <FaStar className="text-yellow-500 text-sm" />
@@ -81,7 +82,7 @@ const LogoIcons = ({sidebarOpen, toggleSidebar,searchsidebarOpen, toggleSearchba
                         4.5+ ratings on Fifo
                        </div>
                     </div>
-                    <div className='flex w-[40%] justify-between'>
+                    <div className='flex w-[70%] lg:w-[40%] justify-between ' >
                         <Search1 />
                         <a href="#" className="text-2xl hover:text-gray-400"><FiUser /></a>
                         <a href="#" className="text-2xl hover:text-gray-400"><FiHeart /></a>

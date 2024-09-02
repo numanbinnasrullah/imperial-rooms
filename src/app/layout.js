@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/2.0.1/spinkit.min.css" />
       </Head>
 
-      <body style={{backgroundColor:"#fff", width: "100vw"}}>
+      <body style={{backgroundColor:"#fff", width: "100%"}}>
         <ReduxProvider>
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </ReduxProvider>
       </body>
     </html>
