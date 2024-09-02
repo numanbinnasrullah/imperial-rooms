@@ -107,7 +107,7 @@ export const TopSellingProducts1 = ({ collection }) => {
                     }
                   });
                 });
-            
+             
                 const uniqueColors = Array.from(colors);
                 const uniqueSizes = Array.from(sizes);
 
