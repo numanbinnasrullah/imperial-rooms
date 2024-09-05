@@ -1,19 +1,21 @@
-export const graphql = async(query) => {
-    // console.log("query", JSON.stringify(query));
+export const graphql = async (query) => {
     try {
-        // console.log('Query:', query);
         const headers = {
             'Content-Type': 'application/json; charset=utf-8',
             'X-Shopify-Storefront-Access-Token': process.env.STOREFRONT_ACCESS_TOKEN,
         };
-        
+
         const response = await fetch(process.env.SHOPIFY_GRAPHQL_ENDPOINT, {
             cache: 'no-store',
-            // next: { revalidate: 15 },
             headers,
             method: "POST",
-            body: JSON.stringify(query)
+            body: JSON.stringify(query),
         });
+
+        // Check if the response was successful
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
         const contentType = response.headers.get("Content-Type");
         
@@ -27,7 +29,7 @@ export const graphql = async(query) => {
         console.log(res);
         return res;
     } catch (error) {
-        console.error('Error:', error.message);
+        console.error('Fetch error:', error.message);
         throw error;
     }
-}
+};

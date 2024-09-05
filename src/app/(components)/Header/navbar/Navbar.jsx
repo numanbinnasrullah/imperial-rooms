@@ -38,13 +38,13 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
       
       { 
         
-        <nav className={`w-full text-center min-h-9 py-0 ${hiddenOnMd ? 'hidden md:block' : 'md:block'}`}>
-        <ul className={`flex justify-center flex-wrap  space-x-4  text-black  ${hiddenOnMd ? 'items-center' : 'flex-col border-b-2'}`}>
+        <nav className={`w-full text-center min-h-9 py-0 border-b-[1px] ${hiddenOnMd ? 'hidden md:block' : 'md:block'}`}>
+        <ul className={`flex justify-center flex-wrap items-center  space-x-4 min-h-9 text-black  ${hiddenOnMd ? 'items-center' : 'flex-col border-b-2'}`}>
        
        {
          data?.res?.data?.menu?.items?.length > 0 && (
            data?.res?.data?.menu?.items?.map(mainItem => (
-             <li className={`group relative py-2`} key={mainItem?.id}>
+             <li className={`group relative`} key={mainItem?.id}>
              <Link href={`/collections/${getLastUrlPart(mainItem?.url)}`}
                className={`hover:text-gray-600 hover:fill-gray-500  text-md flex items-center justify-between  `}>
                  <span>
