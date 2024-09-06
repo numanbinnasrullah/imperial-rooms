@@ -2,11 +2,11 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const CollectionHeader = ({collection}) => {
   const truncateDescription = (text, wordLimit) => {
-    const wordsArray = text.split(' ');
-    if (wordsArray.length <= wordLimit) {
+    const wordsArray = text?.split(' ');
+    if (wordsArray?.length <= wordLimit) {
       return text;
     }
-    return wordsArray.slice(0, wordLimit).join(' ') + '...';
+    return wordsArray?.slice(0, wordLimit).join(' ') + '...';
   };
   const truncatedDescription = truncateDescription(collection?.description, 30);
   return (
