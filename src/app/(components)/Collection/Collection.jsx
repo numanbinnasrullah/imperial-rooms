@@ -3,20 +3,22 @@ import CollectionGrid from "./collectionGrid/CollectionGrid"
 import CollectionHeader from "./collectionHeader/CollectionHeader"
 import CollectionReviews from "./collectionReviews/CollectionReviews"
 import FilterBar from "./filterBar/FilterBar"
+import ProductsAndFiltersWrapper from "./productsAndFiltersWrapper/productsAndFiltersWrapper"
 
 
 const CollectionWraper = async({slug}) => {
 
   let collectionPageData = await collectionPageQuery(slug, "");
   const {collection} = collectionPageData?.data
-  console.log("Collection Page Data", collectionPageData?.data?.collection?.products?.edges)
+  // console.log("Collection Page Data", collectionPageData?.data?.collection?.products?.edges)
   return (
     <>
     <div className="w-full">
         <CollectionHeader collection={collection} />
         <FilterBar collection={collection} />
+        <ProductsAndFiltersWrapper slug={slug}/>
         {/* <CollectionGrid /> */}
-        <CollectionReviews />
+        {/* <CollectionReviews /> */}
     </div>
     </>
   )

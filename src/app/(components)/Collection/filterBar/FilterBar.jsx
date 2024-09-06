@@ -1,9 +1,7 @@
 'use client'
 import { useState } from "react";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import CollectionGrid from "../collectionGrid/CollectionGrid";
 
-const FilterBar = ({collection}) => {
+const FilterBar = () => {
     const [showFilters, setShowFilters] = useState(false);
     
     const handleFilterToggle = () => {
@@ -11,12 +9,25 @@ const FilterBar = ({collection}) => {
       };
   return (
     <>
-        <div className="hidden lg:flex w-[90%] sm:w-[93%] md:w-[90%] lg:w-[85%] xl:w-[77%] mx-auto justify-between h-10 mb-4 text-gray-400 " 
+        <div className="hidden md:flex w-[90%] sm:w-[93%] md:w-[90%] lg:w-[85%] xl:w-[77%] mx-auto justify-between h-10 mb-4 text-gray-400 " 
         >
-            <div className="w-[80%] sm:w-[40%] md:w-[31%] lg:w-[30%] xl:w-[30%] flex justify-between items-center">
+            <div className="w-[80%] sm:w-[40%] md:w-[31%] lg:w-[65%] xl:w-[35%] flex justify-between items-center">
                 <div className="md:w-[59%] lg:w-[66%] xl:w-[70%] flex justify-between items-center cursor-pointer " onClick={handleFilterToggle}>
                     <span>Show Filters</span>
-                    <span><MdOutlineKeyboardArrowDown /></span>
+                    <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-gray-400 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
                 </div>
                 <div>139 Products</div>
             </div>
@@ -29,9 +40,22 @@ const FilterBar = ({collection}) => {
                 )} */}
 
             <div className="w-[72%] flex justify-end items-center">
-                <div className="md:w-[24%] lg:w-[20%] flex justify-between items-center cursor-pointer">
+                <div className="md:w-[24%] lg:w-[30%] xl:w-[18%] flex justify-between items-center cursor-pointer">
                     <span>Most Popular</span>
-                    <span><MdOutlineKeyboardArrowDown /></span>
+                    <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-gray-400 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
                 </div>
             </div>
 
@@ -43,7 +67,7 @@ const FilterBar = ({collection}) => {
             </div>
 
         </div>
-        <CollectionGrid showFilter={showFilters} collection={collection} />
+        {/* <CollectionGrid showFilter={showFilters} /> */}
     </>
   )
 }

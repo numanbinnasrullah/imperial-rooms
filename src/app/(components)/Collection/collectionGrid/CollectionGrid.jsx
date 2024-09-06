@@ -70,87 +70,12 @@ const products = [
 ];
 
 const CollectionGrid = ({showFilter}) => {
-  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(null);
-    } else {
-      setOpenIndex(index);
-    }
-  };
-
-  const faqs = [
-    {
-      question: "FAQ 1",
-      answer: "Yeh hai FAQ 1 ka content.",
-    },
-    {
-      question: "FAQ 2",
-      answer: "Yeh hai FAQ 2 ka content.",
-    },
-    {
-      question: "FAQ 3",
-      answer: "Yeh hai FAQ 3 ka content.",
-    },
-  ];
   return (
     <>
      
-<div className='lg:w-[85%] xl:w-[77%] flex lg:gap-[2%] mx-auto'> 
+
     
-  <div className='lg:w-[40%] xl:w-[25%] h-[700px] border hidden lg:block'>
-  <div className="max-w-3xl mx-auto p-4">
-      {faqs.map((faq, index) => (
-        <div key={index} className="mb-4 ">
-          <div
-            className="flex justify-between items-center border-b p-2 cursor-pointer"
-            onClick={() => toggleFAQ(index)}
-          >
-            <span>{faq.question}</span>
-            <span>
-              {openIndex === index ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-gray-400 "
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 15l7-7 7 7"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-gray-400 "
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              )}
-            </span>
-          </div>
-          {openIndex === index && (
-            <div className="bg-white p-4">
-              <p>{faq.answer}</p>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  </div>
 
   <div className="w-[90%] sm:w-[93%] md:w-[90%] lg:w-[85%] xl:w-[77%] mx-auto flex lg:justify-between flex-wrap gap-[4%] md:gap-[6%] lg:gap-[3%]">
 
@@ -219,7 +144,7 @@ const CollectionGrid = ({showFilter}) => {
         </React.Fragment>
       ))}
     </div>
-</div>
+
 
     </>
    
