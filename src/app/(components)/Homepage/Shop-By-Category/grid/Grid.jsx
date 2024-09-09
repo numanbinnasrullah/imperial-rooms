@@ -17,7 +17,7 @@ const Grid = ({collections}) => {
                                     {/* Box */}
                                     <div className="bg-[#D9D9D9] w-full flex flex-col justify-between">
                                        
-                                            <img src="/Screenshot_4.jpg" />
+                                            <img src="/banners/banner1/Bathroom.jpg" />
                                       
                                         {/* Button at the bottom */}
                                     </div>
@@ -29,7 +29,7 @@ const Grid = ({collections}) => {
                                 <div className="flex flex-col items-center ">
                                     {/* Box */}
                                     <div className="bg-[#D9D9D9] w-full flex flex-col justify-between">
-                                    <img src="/Screenshot_4.jpg" />
+                                    <img src="/banners/banner1/Bedroom.jpg" />
                                         {/* Button at the bottom */}
                                     </div>
                                     <div className="text-right w-full ">
@@ -45,7 +45,7 @@ const Grid = ({collections}) => {
                                 <div className="flex flex-col items-center ">
                                     {/* Box */}
                                     <div className="bg-[#D9D9D9] w-full flex flex-col justify-between">
-                                    <img src="/Screenshot_4.jpg" />
+                                    <img src="/banners/banner1/Hallway.jpg" />
                                         {/* Button at the bottom */}
                                     </div>
                                     <div className="text-right w-full">
@@ -56,7 +56,7 @@ const Grid = ({collections}) => {
                                 <div className="flex flex-col items-center ">
                                     {/* Box */}
                                     <div className="bg-[#D9D9D9] w-full  flex flex-col justify-between">
-                                    <img src="/Screenshot_4.jpg" />
+                                    <img src="/banners/banner1/LivingRoom.jpg" />
                                         {/* Button at the bottom */}
                                     </div>
                                     <div className="text-right w-full ">

@@ -6,10 +6,10 @@ import FilterBar from "./filterBar/FilterBar"
 import ProductsAndFiltersWrapper from "./productsAndFiltersWrapper/productsAndFiltersWrapper"
 
 
-const CollectionWraper = async({slug}) => {
-
-  let collectionPageData = await collectionPageQuery(slug, "");
-  const {collection} = collectionPageData?.data
+const CollectionWraper = async({collection, slug }) => {
+  // console.log(("CollectionWraper", searchParams))
+  // let collectionPageData = await collectionPageQuery(slug, "");
+  // const {collection} = collectionPageData?.data
   // console.log("Collection Page Data", collectionPageData?.data?.collection?.products?.edges)
   return (
     <>

@@ -2,6 +2,7 @@ import CollectionGrid from "../collectionGrid/CollectionGrid"
 import Filters from "../filters/Filters"
 
 
+
 const ProductsAndFiltersWrapper = ({slug}) => {
   return (
     <>

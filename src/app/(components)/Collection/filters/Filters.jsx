@@ -1,15 +1,17 @@
 'use client'
 import { useGetFiltersMutation } from "@/store/services/collectionPageService";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
-const Filters = ({ slug }) => {
+const Filters = ({ slug, GetFilteredProduct}) => {
+  const router = useRouter();
   const [getFilters, response] = useGetFiltersMutation();
   const [openIndex, setOpenIndex] = useState(null);
 
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [selectedColors, setSelectedColors] = useState([]);
 
-  console.log("selectedColors;" , selectedColors)
+  // console.log("selectedColors;" , selectedColors)
 
   const toggleFilter = (index) => {
     if (openIndex === index) {
@@ -25,7 +27,7 @@ const Filters = ({ slug }) => {
         ? prevSelectedColors.filter((selectedColor) => selectedColor !== color)
         : [...prevSelectedColors, color];
         updateUrl({ size: selectedSizes, color: newSelectedColors });
-        // window.location.reload(); 
+        window.location.reload(); 
       return newSelectedColors;
     });
   };
@@ -76,10 +78,10 @@ const updateUrl = ({ size, color }) => {
   try {
     if (params && params instanceof URLSearchParams) {
       const decodedParams = decodeURIComponent(params.toString());
-      // console.log("Numan", decodedParams)
       const newUrl = `?${decodedParams.replace(/\+/g, "")}`;
-      // console.log("new URL", newUrl);
+      router.push(newUrl); // Update URL using Next.js router
     }
+    ()=>(GetFilteredProduct())
   } catch (error) {
     console.error("Error generating new URL:", error);
   }

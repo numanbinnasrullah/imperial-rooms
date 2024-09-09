@@ -26,17 +26,21 @@ const NewArrival = () => {
                   </div>
 
                   <div className="flex lg:items-end  lg:justify-start justify-center lg:w-full md:w-[47%]  h-[50%]">
-                    <div className="w-[310px] h-[310px] bg-[#4A4759]">
-
+                    <div className="w-[310px]  bg-[#4A4759]">
+                      <img src="/banners/newarrival3.jpg" />
                     </div>
                   </div>
 
               </div>
             </div>
             <div className="lg:w-[50%] md:w-full w-[80%] flex lg:justify-end md:justify-center justify-end mx-auto">
-                <div className=" lg:w-[80%] md:w-[50%] w-[79%]  h-[700px] relative  md:ml-[16%] lg:ml-0 ">
-                    <div className="bg-[#F2F2F2]  absolute w-full h-[630px]"> </div>
-                    <div className="bg-[#4A4759]  absolute w-full xl:top-24 xl:right-28 lg:top-20 lg:right-24 md:top-28 md:right-28 h-[630px] top-20 right-20"></div>
+                <div className=" lg:w-[80%] md:w-[50%] w-[79%] h-[500px] sm:h-[550px]  md:h-[600px] relative  md:ml-[16%] lg:ml-0 ">
+                    <div className="  absolute w-full "> 
+                      <img src="/banners/newarrival.jpg" />
+                    </div>
+                    <div className="  absolute w-full xl:top-24 xl:right-28 lg:top-20 lg:right-24 md:top-28 md:right-28  top-20 right-20">
+                      <img src="/banners/newarrival.jpg" />
+                    </div>
                 </div>
             </div>
             
