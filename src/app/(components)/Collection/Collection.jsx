@@ -6,7 +6,7 @@ import FilterBar from "./filterBar/FilterBar"
 import ProductsAndFiltersWrapper from "./productsAndFiltersWrapper/productsAndFiltersWrapper"
 
 
-const CollectionWraper = async({collection, slug }) => {
+const CollectionWraper = async({collection, slug ,initialcheck}) => {
   // console.log(("CollectionWraper", searchParams))
   // let collectionPageData = await collectionPageQuery(slug, "");
   // const {collection} = collectionPageData?.data
@@ -16,7 +16,7 @@ const CollectionWraper = async({collection, slug }) => {
     <div className="w-full">
         <CollectionHeader collection={collection} />
         <FilterBar collection={collection} />
-        <ProductsAndFiltersWrapper slug={slug}/>
+        <ProductsAndFiltersWrapper collection={collection} slug={slug} initialcheck={initialcheck} />
         {/* <CollectionGrid /> */}
         {/* <CollectionReviews /> */}
     </div>

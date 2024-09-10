@@ -3,12 +3,12 @@ import Filters from "../filters/Filters"
 
 
 
-const ProductsAndFiltersWrapper = ({slug}) => {
+const ProductsAndFiltersWrapper = ({collection, slug, initialcheck}) => {
   return (
     <>
         <div className='lg:w-[85%] xl:w-[77%] flex lg:gap-[2%] mx-auto '> 
-            <Filters slug={slug} />
-            <CollectionGrid />
+            <Filters  collection={collection} slug={slug} initialcheck={initialcheck} />
+            <CollectionGrid collection={collection}  />
         </div>
     </>
   )
