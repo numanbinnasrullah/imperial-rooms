@@ -9,10 +9,10 @@ import MenuSkeleton from "../../Skeletons/navbarSkeleton/NavbarSkeleton";
 
 const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
   const {data, isLoading} =  useGetMenuQuery();
-  // console.log("Get Menu", data)
+  console.log("Get Menu", data)
 
   const getLastUrlPart = (url) => {
-    console.log("Get Last URL", url)
+    // console.log("Get Last URL", url)
     const urlParts = url?.split('/');
     return urlParts[urlParts.length - 1];
   };
