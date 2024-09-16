@@ -12,17 +12,19 @@ const Collection = async({ params, searchParams}) => {
   let priceRange = {};
   
   const addVariantOption = (name, value) => {
-    if(value.includes('x')){
-      // console.log("Valueeeeeee include ", value)
-      const valueX =   value.replace('x', ' x ')
+    // Regular expression to match camelCase words and add spaces
+    const formattedValue = value.replace(/([a-z])([A-Z])/g, '$1 $2');
+    
+    if (formattedValue.includes('x')) {
+      const valueX = formattedValue.replace('x', ' x ');
       const variantOption = { "variantOption": { "name": name, "value": valueX } };
       variantOptions.push(variantOption);
-    } else if(value.includes('X')){
-      const valueX =   value.replace('X', ' X ')
+    } else if (formattedValue.includes('X')) {
+      const valueX = formattedValue.replace('X', ' X ');
       const variantOption = { "variantOption": { "name": name, "value": valueX } };
       variantOptions.push(variantOption);
     } else {
-      const variantOption = { "variantOption": { "name": name, "value": value } };
+      const variantOption = { "variantOption": { "name": name, "value": formattedValue } };
       variantOptions.push(variantOption);
     }
   };

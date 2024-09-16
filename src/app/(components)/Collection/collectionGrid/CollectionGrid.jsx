@@ -100,7 +100,8 @@ window.addEventListener('load', () => {
 
   return (
     <>
-  <div className="w-[90%] sm:w-[93%] md:w-[90%] lg:w-[85%] xl:w-[77%] mx-auto flex lg:justify-start flex-wrap gap-[4%] md:gap-[6%] lg:gap-[3%]">
+    <div className='w-[75%]'>
+  <div className="w-[90%] sm:w-[93%] md:w-[90%] lg:w-[85%] xl:w-[100%] flex lg:justify-end flex-wrap gap-[4%] md:gap-[6%] lg:gap-[3%]">
 
       {collection?.products?.edges?.map((item, index) => {
         const prices = item?.node?.variants?.edges.map((item, index) => item?.node?.price?.amount);
@@ -190,9 +191,15 @@ window.addEventListener('load', () => {
           </div>
         </React.Fragment>
       })}
-      <div>
+      
+
+
+      
+    </div>
+
+    <div className='w-[90%] sm:w-[93%] md:w-[90%] lg:w-[85%] xl:w-[77%] mx-auto justify-center m-10'>
       <nav aria-label="Page navigation example text-center">
-  <ul class="flex items-center -space-x-px h-10 text-base">
+  <ul class="flex items-center justify-center space-x-px h-10 text-base">
     {
       collection?.products?.pageInfo?.hasPreviousPage ? <li>
       <button href="#" class={`flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white mr-2
@@ -228,11 +235,7 @@ window.addEventListener('load', () => {
 </nav>
       </div>
 
-
-      
-    </div>
-
-   
+      </div>
 
     </>
    

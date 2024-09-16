@@ -9,11 +9,11 @@ import MenuSkeleton from "../../Skeletons/navbarSkeleton/NavbarSkeleton";
 
 const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
   const {data, isLoading} =  useGetMenuQuery();
-  console.log("Get Menu", data)
+  // console.log("Get Menu", data)
 
   const getLastUrlPart = (url) => {
    if(url.includes('#')){
-    console.log(`URL with Tag ${url}` )
+    // console.log(`URL with Tag ${url}` )
    }
     // console.log("Get Last URL", url)
     const urlParts = url?.split('/');
@@ -22,7 +22,7 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
 
   const handleLinkClick = () => {
     setSidebarOpen(false);
-    console.log("navbar")
+    // console.log("navbar")
   };
   useEffect(() => {
     const links = document.querySelectorAll('.nav-link');

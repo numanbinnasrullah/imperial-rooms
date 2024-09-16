@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
+
 const Filters = ({  collection, slug, GetFilteredProduct, initialcheck}) => {
   const router = useRouter();
   const [getFilters, response] = useGetFiltersMutation();
@@ -34,8 +35,8 @@ const Filters = ({  collection, slug, GetFilteredProduct, initialcheck}) => {
   }
 
   const [selectedSizes, setSelectedSizes] = useState([]);
-  console.log("Selected Sizews",selectedSizes)
   const [selectedColors, setSelectedColors] = useState([]);
+  console.log("Selected Colors",selectedColors)
   const [minPrice, setMinPrice] = useState(storedMinimumValue);
   const [maxPrice, setMaxPrice] = useState(storedMaximumValue);
   const [afterminPrice, setafterminPrice] = useState(storedMinimumValue);
@@ -80,7 +81,7 @@ const Filters = ({  collection, slug, GetFilteredProduct, initialcheck}) => {
 
 
 const updateUrl = ({ size, color }) => {
-  // console.log("Selected Sizes : ", size)
+  console.log("Selected Sizes : ", color)
   const params = new URLSearchParams(window.location.search);
 
   // Clear existing size and color parameters
@@ -174,50 +175,58 @@ const handleRangeChange = (range) => {
 };
 
 const RemoveFilter = (receiveFilter, filterType) => {
+  console.log('Removing', receiveFilter, filterType);
+
+  // Ensure no spaces in receiveFilter
+  receiveFilter = receiveFilter.replace(/\s+/g, '');
+
   if (receiveFilter.includes('x') || receiveFilter.includes('X')) {
-  receiveFilter = receiveFilter.replace(/\s/g, '');
-  // console.log("removeFilter", receiveFilter)
-}
+    receiveFilter = receiveFilter.replace(/\s/g, '');
+    // console.log("removeFilter", receiveFilter);
+  }
 
-const params = new URLSearchParams(window.location.search);
-// console.log("filterType", params.get("nextPage"))
+  const params = new URLSearchParams(window.location.search);
+  // console.log("filterType", params.get("nextPage"));
 
-// Determine the key to delete based on the filter type (size or color)
-const filterKey = 'filter.' + filterType; // Use the filterType parameter
+  // Determine the key to delete based on the filter type (size or color)
+  const filterKey = 'filter.' + filterType; // Use the filterType parameter
 
-// Get the current selected filter values from the URL parameters
-const currentFilters = params.getAll(filterKey);
-// console.log("currentFilters", filterKey )
-// Remove the clicked filter value from the list of current filters
-const updatedFilters = currentFilters.filter(filter => filter !== receiveFilter);
+  // Get the current selected filter values from the URL parameters
+  const currentFilters = params.getAll(filterKey);
+  // console.log("currentFilters", filterKey);
+  
+  // Remove the clicked filter value from the list of current filters
+  const updatedFilters = currentFilters.filter(filter => filter.replace(/\s+/g, '') !== receiveFilter);
 
   params.delete("nextPage");
   params.delete("previousPage");
 
-// Construct the new URL parameters without the clicked filter value
-let newParams = '';
-if (updatedFilters.length > 0) {
-  newParams = '?' + filterKey + '=' + updatedFilters.join('&' + filterKey + '=');
-}
+  // Construct the new URL parameters without the clicked filter value
+  let newParams = '';
+  if (updatedFilters.length > 0) {
+    newParams = '?' + filterKey + '=' + updatedFilters.join('&' + filterKey + '=');
+  }
 
-// Construct the final URL parameters by including all other filters
-const otherFilterKeys = Array.from(params.keys()).filter(key => key !== filterKey);
-const otherFilters = otherFilterKeys.map(key => key + '=' + params.getAll(key).join('&' + key + '=')).join('&');
+  // Construct the final URL parameters by including all other filters
+  const otherFilterKeys = Array.from(params.keys()).filter(key => key !== filterKey);
+  const otherFilters = otherFilterKeys.map(key => key + '=' + params.getAll(key).join('&' + key + '=')).join('&');
 
-// Combine the new and other URL parameters
-if (newParams !== '') {
-  newParams += '&' + otherFilters;
-} else {
-  newParams = '?' + otherFilters;
-}
+  // Combine the new and other URL parameters
+  if (newParams !== '') {
+    newParams += '&' + otherFilters;
+  } else {
+    newParams = '?' + otherFilters;
+  }
 
-// Optionally, you can update the browser's history to reflect the new URL
-window.history.pushState({}, '', window.location.pathname + newParams);
-window.location.reload(); // Reload the page
+  // Optionally, you can update the browser's history to reflect the new URL
+  window.history.pushState({}, '', window.location.pathname + newParams);
+  window.location.reload(); // Reload the page
 
-// params.delete("nextPage");
-// params.delete("previousPage");
+  // params.delete("nextPage");
+  // params.delete("previousPage");
 };
+
+
 
 
 
@@ -306,7 +315,46 @@ useEffect(() => {
   return (
     <>
     {
-      response.isLoading ? "Loading...!" : 
+      response.isLoading ? 
+      <div role="status" class="w-[22%] h-[400px] p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700">
+          <div class="flex items-center justify-between">
+              <div>
+                  <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+                  <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+          </div>
+          <div class="flex items-center justify-between pt-4">
+              <div>
+                  <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+                  <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+          </div>
+          <div class="flex items-center justify-between pt-4">
+              <div>
+                  <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+                  <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+          </div>
+          <div class="flex items-center justify-between pt-4">
+              <div>
+                  <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+                  <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+          </div>
+          <div class="flex items-center justify-between pt-4">
+              <div>
+                  <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+                  <div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+          </div>
+          <span class="sr-only">Loading...</span>
+      </div>
+       : 
       <div className='lg:w-[40%] xl:w-[23%] h-full border hidden lg:block'>
      
       {selectedColors && selectedColors.map((item, index)=>{
