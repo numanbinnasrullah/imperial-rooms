@@ -12,7 +12,9 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
   console.log("Get Menu", data)
 
   const getLastUrlPart = (url) => {
-   
+   if(url.includes('#')){
+    console.log(`URL with Tag ${url}` )
+   }
     // console.log("Get Last URL", url)
     const urlParts = url?.split('/');
     return urlParts[urlParts.length - 1];
@@ -46,10 +48,10 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
        {
          data?.res?.data?.menu?.items?.length > 0 && (
            data?.res?.data?.menu?.items?.map(mainItem => (
-             <li className={`group relative ${mainItem?.url.includes('#') ? 'disabled' : ''}`} key={mainItem?.id}>
+             <li className={`group relative`} key={mainItem?.id}>
              <Link href={`/collections/${getLastUrlPart(mainItem?.url)}`}
                className={`hover:text-gray-600 hover:fill-gray-500  text-md flex items-center justify-between  `}>
-                 <span className={`${mainItem?.url.includes('#') ? 'disabled' : ''}`}>
+                 <span >
                    {
                      hiddenOnMd ? "" : <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" class="mr-4 inline-block"
                      viewBox="0 0 64 64">
