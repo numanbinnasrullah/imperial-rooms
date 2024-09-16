@@ -57,7 +57,7 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
                    </svg>
                    }
                  
-                 {/* {mainItem?.title} */}
+                 {mainItem?.title}
                  </span>
                  {
                    mainItem?.items?.length > 0 &&  (
