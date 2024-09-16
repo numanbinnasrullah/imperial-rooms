@@ -72,9 +72,9 @@ const removePreviousPageIfFirstPage = () => {
 };
 
 // Call the function on page load
-// window.addEventListener('load', () => {
-//   removePreviousPageIfFirstPage();
-// });
+window.addEventListener('load', () => {
+  removePreviousPageIfFirstPage();
+});
 
 
   const customColorMapping = {
