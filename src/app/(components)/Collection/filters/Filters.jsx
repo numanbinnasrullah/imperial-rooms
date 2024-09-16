@@ -305,8 +305,9 @@ useEffect(() => {
 
   return (
     <>
-   
-    <div className='lg:w-[40%] xl:w-[23%] h-full border hidden lg:block'>
+    {
+      response.isLoading ? "Loading...!" : 
+      <div className='lg:w-[40%] xl:w-[23%] h-full border hidden lg:block'>
      
       {selectedColors && selectedColors.map((item, index)=>{
               return <> 
@@ -611,6 +612,8 @@ useEffect(() => {
         )}
       </div>
     </div>
+    }
+   
     </>
   );
 };
