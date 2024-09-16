@@ -48,8 +48,8 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
            data?.res?.data?.menu?.items?.map(mainItem => (
              <li className={`group relative`} key={mainItem?.id}>
              <Link href={`/collections/${getLastUrlPart(mainItem?.url)}`}
-               className={`hover:text-gray-600 hover:fill-gray-500  text-md flex items-center justify-between ${mainItem?.url.includes('#') ? 'disabled' : ''} `}>
-                 <span>
+               className={`hover:text-gray-600 hover:fill-gray-500  text-md flex items-center justify-between  `}>
+                 <span className={`${mainItem?.url.includes('#') ? 'disabled' : ''}`}>
                    {
                      hiddenOnMd ? "" : <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" class="mr-4 inline-block"
                      viewBox="0 0 64 64">
