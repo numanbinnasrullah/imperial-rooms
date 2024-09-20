@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const homePageService = createApi({
     reducerPath: 'homePage',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://imperial-rooms.vercel.app/',
+        baseUrl: 'https://imperial-rooms.vercel.app/api/',
     }),
     endpoints: (builder) => ({
         getMenu: builder.query({
