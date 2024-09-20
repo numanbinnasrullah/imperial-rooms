@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const collectionService = createApi({
     reducerPath: 'collection',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:3000/api/',
+        baseUrl: 'https://imperial-rooms.vercel.app/',
     }),
     endpoints: (builder) => ({
         getCollection: builder.mutation({

@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
   return (
     <>
     <div className='w-[90%] md:w-[90%] lg:w-[75%]   mx-auto'>
-  <div className="w-[100%] sm:w-[100%] md:w-[100%] lg:w-[100%] xl:w-[100%] flex lg:justify-end flex-wrap gap-[4%] md:gap-[6%] lg:gap-[3%]">
+  <div className="w-[100%] sm:w-[100%] md:w-[100%] lg:w-[100%] xl:w-[100%] flex lg:justify-start flex-wrap gap-[4%] md:gap-[6%] lg:gap-[3%]">
 
       {collection?.products?.edges?.map((item, index) => {
         const prices = item?.node?.variants?.edges.map((item, index) => item?.node?.price?.amount);
