@@ -1,8 +1,8 @@
 import { graphql } from "../graphql";
 
 const filtersQuery = async(collectionSlug, filter, paginate ) => {
-    console.log("Filter query console", paginate)
-    console.log("Filter query console below",collectionSlug, filter)
+    // console.log("Filter query console", paginate)
+    // console.log("Filter query console below",collectionSlug, filter)
     if(paginate && paginate.includes('nextPage')){
       const query = `
       query collectionPageQuery($slug:String!, $filter: [ProductFilter!], $nextPage: String,) {

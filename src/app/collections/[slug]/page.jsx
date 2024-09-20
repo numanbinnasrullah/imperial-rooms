@@ -9,6 +9,7 @@ const Collection = async({ params, searchParams}) => {
   // console.log("slug", slug)
   const variantOptions = [];
   let paginate = ""
+  let sort = ""
   let priceRange = {};
   
   const addVariantOption = (name, value) => {
@@ -38,7 +39,7 @@ const addPriceRange = (min, max) => {
   for (const key in searchParams) {
     if (searchParams.hasOwnProperty(key)) {
       let values = searchParams[key];
-      // console.log("Values", values)
+      console.log("Values", key)
       if (!Array.isArray(values)) {
         values = [values]; // Convert to array if not already an array
       }
@@ -70,6 +71,12 @@ const addPriceRange = (min, max) => {
             case 'previousPage':
                paginate = JSON.stringify(value);
             break;
+            case 'sort_by':
+              // if (value === "alphabetically-A-Z" || value === "alphabetically-Z-A") {
+              //   sort = "TITLE";
+              // }
+               sort = value;
+            break;
             default:
               break;
           }
@@ -83,7 +90,7 @@ if (priceRange.min !== undefined && priceRange.max !== undefined) {
   addPriceRange(priceRange.min, priceRange.max);
 }
 
-  console.log("variantOptions", variantOptions)
+  console.log("Sort Value", sort)
   let collectionPageData;
   let initialcheck ;
   if(variantOptions?.length > 0){
@@ -93,10 +100,18 @@ if (priceRange.min !== undefined && priceRange.max !== undefined) {
       collectionPageData = await filtersQuery(slug, JSON.stringify(variantOptions), paginate );
     }
   }else {
-    initialcheck = true
-    collectionPageData = await collectionPageQuery(slug, "");
-    if(paginate){
-      collectionPageData = await collectionPageQuery(slug, paginate);
+    initialcheck = true;
+    if (sort != "") {
+    console.log("Sort condition run")
+      collectionPageData = await collectionPageQuery(slug, "", sort); // Pass the sort value
+      if (paginate) {
+        collectionPageData = await collectionPageQuery(slug, paginate, sort); // Pass the sort value
+      }
+    } else {
+      collectionPageData = await collectionPageQuery(slug, "", "");
+      if (paginate) {
+        collectionPageData = await collectionPageQuery(slug, paginate, "");
+      }
     }
   }
   const {collection} = collectionPageData?.data

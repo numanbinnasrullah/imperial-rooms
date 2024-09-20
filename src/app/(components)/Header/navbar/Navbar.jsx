@@ -42,7 +42,7 @@ const Navbar = ({hiddenOnMd, setSidebarOpen}) => {
       
       { 
         
-        <nav className={`w-full text-center min-h-9 py-0 border-b-[1px] ${hiddenOnMd ? 'hidden md:block' : 'md:block'}`}>
+        <nav className={`w-full text-center min-h-9 py-0 px-7 border-b-[1px] ${hiddenOnMd ? 'hidden md:block' : 'md:block'}`}>
         <ul className={`flex justify-center flex-wrap items-center  space-x-4 min-h-9 text-black  ${hiddenOnMd ? 'items-center' : 'flex-col border-b-2'}`}>
        
        {

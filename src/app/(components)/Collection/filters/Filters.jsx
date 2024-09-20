@@ -29,9 +29,11 @@ const Filters = ({  collection, slug, GetFilteredProduct, initialcheck}) => {
   }
   let storedMaximumValue;
   let storedMinimumValue;
-  if (typeof window !== 'undefined') {
-    storedMaximumValue = JSON.parse(localStorage.getItem('maximumValue'));
-    storedMinimumValue = JSON.parse(localStorage.getItem('minimumValue'));
+  if(collection?.products){
+    if (typeof window !== 'undefined') {
+      storedMaximumValue = JSON.parse(localStorage.getItem('maximumValue'));
+      storedMinimumValue = JSON.parse(localStorage.getItem('minimumValue'));
+    }
   }
 
   const [selectedSizes, setSelectedSizes] = useState([]);
@@ -62,7 +64,7 @@ const Filters = ({  collection, slug, GetFilteredProduct, initialcheck}) => {
         ? prevSelectedColors.filter((selectedColor) => selectedColor !== color)
         : [...prevSelectedColors, color];
         updateUrl({ size: selectedSizes, color: newSelectedColors });
-        window.location.reload(); 
+        // window.location.reload(); 
       return newSelectedColors;
     });
   };
@@ -74,7 +76,7 @@ const Filters = ({  collection, slug, GetFilteredProduct, initialcheck}) => {
         : [...prevSelectedSizes, size];
       updateUrl({ size: newSelectedSizes, color: selectedColors });
       
-      window.location.reload();
+      // window.location.reload();
       return newSelectedSizes;
     });
   };
@@ -126,7 +128,7 @@ const updateUrl = ({ size, color }) => {
 
   }
   // console.log("new URL", newUrl)
-  history.pushState(null, '', newUrl);
+  // history.pushState(null, '', newUrl);
 };
 
 const updateURL = (range) => {
@@ -137,8 +139,8 @@ const updateURL = (range) => {
 
       params.delete("filter.gt-price");
       params.delete("filter.lt-price");
-      params.append("filter.gt-price", range[0]);
-      params.append("filter.lt-price", range[1]);
+      params.set("filter.gt-price", range[0]);
+      params.set("filter.lt-price", range[1]);
       let newUrl;
       if(params){
 
@@ -355,7 +357,7 @@ useEffect(() => {
           <span class="sr-only">Loading...</span>
       </div>
        : 
-      <div className='lg:w-[40%] xl:w-[23%] h-full border hidden lg:block'>
+      <div className='lg:w-[35%] xl:w-[23%] h-full border hidden lg:block'>
      
       {selectedColors && selectedColors.map((item, index)=>{
               return <> 
