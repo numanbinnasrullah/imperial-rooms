@@ -3,6 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import React, { useState } from 'react';
 import colornames from 'colornames';
 import Color from 'color'; 
+import Link from 'next/link';
 
 
 const CollectionGrid = ({collection}) => {
@@ -132,10 +133,14 @@ window.addEventListener('load', () => {
             </div>
 
             <div className="product_img">
+              <Link href={`/products/${item?.node?.handle}`}>
               <img src={item?.node?.featuredImage?.url}
                 // alt={product.title}
                 className="object-cover"
               />
+              </Link>
+
+              
             </div>
 
             <div className="product_info transition-shadow duration-300 group-hover:shadow-md group-hover:shadow-gray-200">

@@ -53,3 +53,15 @@ body {
   .price-slider .rc-slider-rail {
     background-color: rgb(76, 74, 74) !important;
   }
+
+
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }

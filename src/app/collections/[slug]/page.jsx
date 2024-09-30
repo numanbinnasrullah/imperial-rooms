@@ -4,7 +4,7 @@ import filtersQuery from "@/graphql/filters/filters";
 
 
 const Collection = async({ params, searchParams}) => {
-  console.log("CollectionWraper run", params, searchParams)
+  // console.log("CollectionWraper run", params, searchParams)
   const slug = params?.slug
   // console.log("slug", slug)
   const variantOptions = [];
@@ -39,7 +39,7 @@ const addPriceRange = (min, max) => {
   for (const key in searchParams) {
     if (searchParams.hasOwnProperty(key)) {
       let values = searchParams[key];
-      console.log("Values", key)
+      // console.log("Values", key)
       if (!Array.isArray(values)) {
         values = [values]; // Convert to array if not already an array
       }
@@ -90,7 +90,7 @@ if (priceRange.min !== undefined && priceRange.max !== undefined) {
   addPriceRange(priceRange.min, priceRange.max);
 }
 
-  console.log("Sort Value", sort)
+  // console.log("Sort Value", sort)
   let collectionPageData;
   let initialcheck ;
   if(variantOptions?.length > 0){
@@ -102,7 +102,7 @@ if (priceRange.min !== undefined && priceRange.max !== undefined) {
   }else {
     initialcheck = true;
     if (sort != "") {
-    console.log("Sort condition run")
+    // console.log("Sort condition run")
       collectionPageData = await collectionPageQuery(slug, "", sort); // Pass the sort value
       if (paginate) {
         collectionPageData = await collectionPageQuery(slug, paginate, sort); // Pass the sort value
